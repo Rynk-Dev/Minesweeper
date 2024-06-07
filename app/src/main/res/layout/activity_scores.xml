@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".Rules"
+    style="@style/bg"
+    >
+    <RelativeLayout
+        android:id="@+id/navbar"
+        style="@style/navbar"
+        >
+        <ImageButton
+            android:id="@+id/home_button"
+            style="@style/nav_button.start"
+            android:background="@drawable/home"
+            android:tag="main"
+            />
+        <TextView style="@style/nav_title"
+            android:text="@string/scores"
+            />
+        <ImageButton
+            android:id="@+id/play_button"
+            style="@style/nav_button.end"
+            android:background="@drawable/play"
+            android:tag="play"
+            />
+    </RelativeLayout>
+
+
+<!--    CURRENT SCORE       -->
+    <TextView
+        android:id="@+id/score_label"
+        style="@style/score_label"
+        android:text="@string/last_score"
+        android:layout_below="@id/navbar"/>
+
+    <RelativeLayout style="@style/span"
+        android:id="@+id/last_score"
+        android:layout_below="@id/score_label">
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/score_name"
+            android:text="todd"
+            />
+        <ImageView
+            style="@style/score_icon"
+            android:layout_toStartOf="@id/user_time"
+            />
+        <TextView
+            android:id="@+id/user_time"
+            style="@style/score_time"
+            android:text="15:33"
+            />
+    </RelativeLayout>
+
+<!--    USER HIGH SCORE      -->
+    <TextView
+        android:id="@+id/top_score_label"
+        style="@style/score_label"
+        android:text="@string/user_top_score"
+        android:layout_below="@id/last_score"/>
+
+    <RelativeLayout style="@style/span"
+        android:id="@+id/top_score"
+        android:layout_below="@id/top_score_label">
+        <TextView
+            style="@style/score_name"
+            android:id="@+id/top_user_name"
+            android:text="todd"
+            />
+        <ImageView
+            style="@style/score_icon"
+            android:layout_toStartOf="@id/top_user_time"
+            />
+        <TextView
+            android:id="@+id/top_user_time"
+            style="@style/score_time"
+            android:text="15:33"
+            />
+    </RelativeLayout>
+    <!--    TOTAL HIGH SCORE      -->
+    <TextView
+        android:id="@+id/gold_score_label"
+        style="@style/score_label"
+        android:text="@string/gold_label"
+        android:layout_below="@id/top_score"/>
+
+    <RelativeLayout style="@style/span"
+        android:id="@+id/gold_score"
+        android:layout_below="@id/gold_score_label">
+        <TextView
+            style="@style/score_name"
+            android:id="@+id/gold_user_name"
+            android:text="todd"
+            />
+        <ImageView
+            style="@style/score_icon"
+            android:layout_toStartOf="@id/gold_user_time"
+            />
+        <TextView
+            android:id="@+id/gold_user_time"
+            style="@style/score_time"
+            android:text="15:33"
+            />
+    </RelativeLayout>
+    <!--    TOTAL HIGH SCORE      -->
+    <TextView
+        android:id="@+id/silver_score_label"
+        style="@style/score_label"
+        android:text="@string/silver_label"
+        android:layout_below="@id/gold_score"/>
+
+    <RelativeLayout style="@style/span"
+        android:id="@+id/silver_score"
+        android:layout_below="@id/silver_score_label">
+        <TextView
+            style="@style/score_name"
+            android:id="@+id/silver_user_name"
+            android:text="todd"
+            />
+        <ImageView
+            style="@style/score_icon"
+            android:layout_toStartOf="@id/silver_user_time"
+            />
+        <TextView
+            android:id="@+id/silver_user_time"
+            style="@style/score_time"
+            android:text="15:33"
+            />
+    </RelativeLayout>
+    <!--    TOTAL HIGH SCORE      -->
+    <TextView
+        android:id="@+id/bronze_score_label"
+        style="@style/score_label"
+        android:text="@string/bronze_label"
+        android:layout_below="@id/silver_score"/>
+
+    <RelativeLayout style="@style/span"
+        android:id="@+id/total_top_score"
+        android:layout_below="@id/bronze_score_label">
+        <TextView
+            style="@style/score_name"
+            android:id="@+id/bronze_user_name"
+            android:text="todd"
+            />
+        <ImageView
+            style="@style/score_icon"
+            android:layout_toStartOf="@id/bronze_user_time"
+            />
+        <TextView
+            android:id="@+id/bronze_user_time"
+            style="@style/score_time"
+            android:text="15:33"
+            />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/debug_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="reset"/>
+</RelativeLayout>

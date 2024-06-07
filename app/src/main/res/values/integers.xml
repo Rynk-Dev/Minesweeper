@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="rows_small">10</integer>
+    <integer name="cols_small">10</integer>
+    <integer name="mines_small">10</integer>
+</resources>

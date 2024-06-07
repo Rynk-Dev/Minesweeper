@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/bg"
+    android:orientation="vertical"
+    tools:context=".Endscreen">
+    <ImageView style="@style/linear_child.poster"
+        android:id="@+id/logo"
+        android:src="@drawable/trophy"
+        />
+    <LinearLayout style="@style/linear_child.1">
+        <TextView style="@style/title"
+            android:id="@+id/game_status"
+            android:text="@string/win"
+            />
+    </LinearLayout>
+    <RelativeLayout style="@style/linear_child.1">
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/score_name"
+            android:text="todd"
+            />
+        <ImageView
+            style="@style/score_icon"
+            android:layout_toStartOf="@id/user_time"
+            />
+        <TextView
+            android:id="@+id/user_time"
+            style="@style/score_time"
+            android:text="15:33"
+            />
+    </RelativeLayout>
+    <LinearLayout style="@style/linear_child.vert.3">
+        <Button
+            style="@style/menu_button_icon"
+            android:text="@string/play_again"
+            app:icon="@drawable/play"
+            android:tag="play"/>
+        <Button
+            style="@style/menu_button_icon"
+            android:text="@string/scores"
+            app:icon="@drawable/medal"
+            android:tag="scores"/>
+        <Button
+            style="@style/menu_button_icon"
+            android:text="@string/menu"
+            app:icon="@drawable/home"
+            android:tag="main"/>
+    </LinearLayout>
+</LinearLayout>

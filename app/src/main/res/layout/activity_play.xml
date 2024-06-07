@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".Play"
+    style="@style/bg"
+    >
+    <RelativeLayout
+        android:id="@+id/navbar"
+        style="@style/navbar"
+        >
+        <ImageButton
+            android:id="@+id/nav_end_button"
+            style="@style/nav_button.start"
+            android:background="@drawable/close"
+            android:tag="end"
+            android:onClick="endGameListener"
+            />
+        <!--<TextView
+            android:id="@+id/debug_end_game"
+            style="@style/nav_title"
+            android:text="End"
+            />-->
+        <ImageButton
+            android:id="@+id/nav_hint_button"
+            style="@style/nav_button.end"
+            android:background="@drawable/help"
+            android:tag="rules"
+            />
+    </RelativeLayout>
+    <!--<TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="70dp"
+        android:layout_centerVertical="true">
+        <TextView
+            android:text="Board goes here!"/>
+    </TableLayout>-->
+        <GridLayout
+            android:id="@+id/game_board"
+            android:layout_below="@id/navbar"
+            android:layout_above="@id/score_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/nav_bottom_margin"
+            >
+        </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/score_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/remaining_mines_box"
+            style="@style/statbar_box"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/menu_padding">
+
+            <ImageView
+                android:id="@+id/mine_remainder_icon"
+                style="@style/statbar_icons"
+                android:src="@drawable/mine_icon" />
+
+            <TextView
+                android:id="@+id/mine_remainder_text"
+                style="@style/statbar_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/statbar_box"
+            android:layout_below="@id/remaining_mines_box"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                style="@style/statbar_icons"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/elapsed_time"
+                style="@style/statbar_text"/>
+        </LinearLayout>
+        <!--<ToggleButton
+            android:layout_width=""
+            android:layout_height=""-->
+<!--        <Switch-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:thumb="@drawable/cursor_mode_checked"-->
+<!--            android:thumbTint="@drawable/cursor_mode_checked"-->
+<!--            android:track="@drawable/selector_track"-->
+<!--            android:checked="false"-->
+<!--            android:switchMinWidth="60dp"-->
+<!--            android:switchPadding="10dp"-->
+<!--            tools:ignore="UseSwitchCompatOrMaterialXml"-->
+<!--            />-->
+        <!--        android:drawableRight="@drawable/icon"-->
+        <!--        android:drawableLeft="@drawable/flag"-->
+        <!--        -->
+
+        <!--        android:track="@drawable/unknown"-->
+        <!--        />-->
+        <RadioGroup
+            android:id="@+id/cursor_mode_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:background="@drawable/score_border"
+            android:backgroundTint="@color/dark_blue"
+            android:padding="@dimen/border_width">
+
+            <RadioButton
+                android:id="@+id/flag_cursor"
+                android:layout_width="@dimen/score_icon_size"
+                android:layout_height="@dimen/score_icon_size"
+                android:background="@drawable/flag_mode_selector"
+                android:button="@null"
+                android:checked="true"
+                android:tag="@string/flag_cursor"
+                />
+            <RadioButton
+                android:id="@+id/mine_cursor"
+                android:layout_width="@dimen/score_icon_size"
+                android:layout_height="@dimen/score_icon_size"
+                android:background="@drawable/mine_mode_selector"
+                android:button="@null"
+                android:tag="@string/mine_cursor"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+
+
+</RelativeLayout>

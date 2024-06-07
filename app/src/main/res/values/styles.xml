@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="bg">
+        <item name="android:background">@drawable/unknown</item>
+        <item name="android:padding">@dimen/portrait_padding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+
+    <style name="wrapped">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="span">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="title" parent="wrapped">
+        <item name="android:textSize">@dimen/text_size_1</item>
+    </style>
+
+    <style name="subheading" parent="wrapped">
+        <item name="android:textSize">@dimen/text_size_2</item>
+    </style>
+
+
+    <style name="menu_button" parent="wrapped">
+        <item name="android:layout_margin">7dp</item>
+        <item name="android:textSize">@dimen/text_size_2</item>
+        <item name="android:padding">@dimen/menu_padding</item>
+        <item name="android:paddingStart">@dimen/menu_horizontal_padding</item>
+        <item name="android:paddingEnd">@dimen/menu_horizontal_padding</item>
+        <item name="android:onClick">@string/menu_button_handler</item>
+    </style>
+
+    <style name="menu_button_icon" parent="menu_button">
+        <item name="android:gravity">start</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="iconGravity">end</item>
+        <item name="iconSize">@dimen/menu_icon_size</item>
+    </style>
+
+    <style name="menu_button_icon_land" parent="menu_button_icon">
+        <item name="android:layout_gravity">fill_horizontal</item>
+    </style>
+
+    <style name="linear_child">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="linear_child.1">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="linear_child.vert">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="linear_child.vert.1">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="linear_child.vert.3">
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="linear_child.poster">
+        <item name="android:layout_weight">3</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="score_label" parent="wrapped">
+        <item name="android:textSize">@dimen/text_size_3</item>
+    </style>
+
+    <style name="score_name" parent="subheading">
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:paddingLeft">@dimen/score_box_left_padding</item>
+    </style>
+
+    <style name="score_icon" parent="statbar_icons">
+        <item name="android:src">@drawable/clock</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="score_time" parent="statbar_text">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <!--    <style name="relative_child" parent="wrapped">
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <style name="relative_child.end">
+        <item name="android:layout_centerInParent">true</item>
+    </style>-->
+    <style name="navbar" parent="span">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginBottom">@dimen/nav_bottom_margin</item>
+    </style>
+
+    <style name="nav_title" parent="title">
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="nav_button">
+        <item name="android:layout_width">@dimen/nav_button_size</item>
+        <item name="android:layout_height">@dimen/nav_button_size</item>
+        <item name="android:onClick">menu_click</item>
+    </style>
+
+    <style name="nav_button.start">
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+
+    <style name="nav_button.end">
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <style name="statbar_icons">
+        <item name="android:layout_width">@dimen/score_icon_size</item>
+        <item name="android:layout_height">@dimen/score_icon_size</item>
+    </style>
+
+    <style name="statbar_text">
+        <item name="android:layout_width">@dimen/score_text_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_2</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="statbar_box" parent="wrapped">
+        <item name="android:background">@drawable/score_border</item>
+        <item name="android:paddingStart">@dimen/score_box_left_padding</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.Theme.Minesweeper.Tile" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+</resources>
