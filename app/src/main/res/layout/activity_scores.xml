@@ -19,7 +19,7 @@
     <TextView
         android:id="@+id/scores_title_view"
         style="@style/top_title"
-        android:text="@string/scores_btn_text" />
+        android:text="@string/scores_title" />
 
     <ImageButton
         android:id="@+id/play_button"
@@ -31,7 +31,7 @@
     <TextView
         android:id="@+id/score_label"
         style="@style/score_label"
-        android:text="@string/last_score"
+        android:text="@string/last_score_label"
         app:layout_constraintTop_toBottomOf="@+id/home_button"
         app:layout_constraintBottom_toTopOf="@id/user_name"/>
 
@@ -57,7 +57,7 @@
     <TextView
         android:id="@+id/user_top_label"
         style="@style/score_label"
-        android:text="@string/user_top_score"
+        android:text="@string/user_top_score_label"
         app:layout_constraintTop_toBottomOf="@id/user_name" />
 
     <TextView
@@ -154,6 +154,6 @@
     <Button
         android:id="@+id/debug_reset"
         style="@style/menu_button"
-        android:text="@string/reset"
+        android:text="@string/reset_btn_text"
         app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

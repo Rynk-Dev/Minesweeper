@@ -79,12 +79,12 @@
             style="@style/cursor_selector"
             android:background="@drawable/flag_mode_selector"
             android:checked="true"
-            android:tag="@string/flag_cursor" />
+            android:tag="@string/flag_cursor_value" />
 
         <RadioButton
             android:id="@+id/mine_cursor"
             style="@style/cursor_selector"
             android:background="@drawable/mine_mode_selector"
-            android:tag="@string/mine_cursor" />
+            android:tag="@string/mine_cursor_value" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

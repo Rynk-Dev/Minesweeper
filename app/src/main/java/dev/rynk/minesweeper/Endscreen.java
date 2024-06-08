@@ -40,7 +40,7 @@ public class Endscreen extends AppCompatActivity {
         setScoreView();
         if (won){
             if (newPersonalBest){
-                Toast.makeText(this, getString(R.string.new_personal_best), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.new_personal_best_message), Toast.LENGTH_LONG).show();
             }
             setWinView();
         }
@@ -55,11 +55,11 @@ public class Endscreen extends AppCompatActivity {
     }
     private void setLoseView() {
         binding.logo.setImageResource(R.drawable.close);
-        binding.gameStatus.setText(R.string.lose);
+        binding.gameStatus.setText(R.string.lose_message);
     }
     private void setWinView() {
         binding.logo.setImageResource(R.drawable.trophy);
-        binding.gameStatus.setText(R.string.win);
+        binding.gameStatus.setText(R.string.win_message);
     }
     private void getStats() {
         Intent gameResults = getIntent();

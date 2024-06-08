@@ -18,7 +18,7 @@
     <TextView
         android:id="@+id/game_status"
         style="@style/banner_title"
-        android:text="@string/win"
+        android:text="@string/win_message"
         app:layout_constraintVertical_bias="0.5" />
 <!--    SCORE   -->
     <TextView
@@ -49,14 +49,14 @@
         android:id="@+id/button"
         style="@style/menu_button_icon"
         android:tag="@string/main_btn_tag"
-        android:text="@string/menu_btn_text"
+        android:text="@string/menu_title"
         app:icon="@drawable/home"
         app:layout_constraintBottom_toTopOf="@+id/button3" />
     <Button
         android:id="@+id/button3"
         style="@style/menu_button_icon"
         android:tag="@string/scores_btn_tag"
-        android:text="@string/scores_btn_text"
+        android:text="@string/scores_title"
         app:icon="@drawable/medal"
         app:layout_constraintBottom_toBottomOf="parent" />
 

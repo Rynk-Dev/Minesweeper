@@ -1,46 +1,51 @@
 <resources>
 
-    <string name="scores_btn_text">Scores</string>
-    <string name="play_btn_text">Play</string>
-    <string name="play_again_btn_text">Play Again</string>
-    <string name="menu_btn_text">Menu</string>
+    <string name="rules_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sollicitudin urna a ultrices. Aliquam ornare leo ut neque rutrum, eget vestibulum diam hendrerit. Morbi non dui condimentum, vulputate quam at, bibendum dolor. Quisque nibh velit, aliquam sit amet placerat quis, fermentum at nulla. Praesent nec egestas est. Donec volutpat risus sed accumsan imperdiet. Suspendisse ultrices efficitur fringilla.\n\nProin sit amet mauris ex. Donec suscipit fringilla nibh quis iaculis. Vivamus sit amet efficitur sem, a sodales mi. Donec imperdiet aliquam lectus, at venenatis elit. Vivamus scelerisque rutrum nulla. Nulla tempor bibendum ex et sodales. Sed pretium urna ac velit dictum ornare. Aenean tristique erat nec tellus fermentum dictum. Aliquam consequat lorem egestas, suscipit ante mattis, ultricies metus. Cras maximus commodo lectus, sit amet vehicula felis lobortis nec. Etiam lacinia quis enim a malesuada. Nam luctus pretium risus vel volutpat. Vivamus in est in nunc gravida suscipit. Nulla in finibus orci, aliquet tincidunt quam. Suspendisse at justo dictum, sodales nisl semper, imperdiet lacus. Nullam commodo, ipsum ut convallis aliquet, lectus dui euismod augue, scelerisque ultrices dui nunc vitae dolor.\n\nDuis laoreet tellus quis neque tempus pellentesque. Sed at ultrices urna, ullamcorper tempor erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis aliquet fermentum risus, in sollicitudin lectus elementum sit amet. Aliquam erat volutpat. Aenean ac ante in leo cursus rhoncus. Praesent euismod massa a porttitor elementum. Donec nec egestas arcu, facilisis fringilla velit. Integer massa risus, vestibulum at urna non, aliquam tempor enim. Mauris suscipit aliquam ex at pellentesque. Curabitur elementum eros sit amet tortor vehicula euismod. Vestibulum quam purus, eleifend sit amet magna eu, porta pellentesque diam. Integer sodales ipsum lacus, quis suscipit est aliquam vitae. Etiam nunc mauris, condimentum id mollis ac, varius sit amet magna. Quisque non volutpat libero. Quisque condimentum augue eu porttitor hendrerit.\n\nProin sollicitudin pellentesque faucibus. Quisque sit amet sagittis lorem, eget luctus erat. Nullam finibus dui sit amet mi laoreet, ac hendrerit metus pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis tincidunt ex, eu viverra libero. Nulla aliquet, sapien vel molestie iaculis, urna nisi interdum lorem, ac blandit mi mi vel metus. Vestibulum ut odio aliquam, placerat mi et, tristique metus. Nam ac feugiat ante. Ut lobortis arcu massa, sit amet tincidunt justo luctus nec. Nullam faucibus rutrum purus, eget posuere massa efficitur et. Aenean hendrerit quam sapien, nec suscipit orci ultricies a. Ut eu eros vel nisl efficitur mollis sit amet et nulla. Praesent sed eros bibendum, bibendum lectus id, malesuada massa. Nunc pellentesque lacus a sapien convallis, eget fringilla libero pellentesque.\n\nInteger dapibus mollis justo vitae lobortis. Maecenas rhoncus ac risus eu consequat. Phasellus non velit quis mauris pretium gravida. Nam tristique lectus tellus, nec ornare quam tempus vitae. Vivamus dapibus et leo ac vestibulum. Nunc vestibulum turpis quis ligula efficitur rhoncus. Nunc hendrerit sapien felis, vel auctor nisl rhoncus vitae.\n\nCras blandit euismod faucibus. Vestibulum iaculis nisi ac orci porta, eu pellentesque dolor consequat. Phasellus eget ligula vestibulum, gravida mauris vel, commodo sem. Pellentesque euismod vulputate mi, eget finibus urna posuere consequat. Proin nulla odio, dictum at rutrum vel, rutrum id augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in tempor lorem, eu finibus diam. Nullam sit amet lacus bibendum, sagittis mi id, elementum tortor. Cras molestie neque sed neque egestas ultrices. Duis vel mi iaculis, porttitor eros in, finibus augue. Aliquam ultricies lacus nec erat mollis rutrum.</string>
 
+    <!--    TITLE TEXT        -->
     <string name="app_name">Minesweeper</string>
     <string name="title">Minesweeper</string>
+    <string name="menu_title">Menu</string>
     <string name="rules_title">Rules</string>
+    <string name="scores_title">Scores</string>
+    <string name="play_title">Play</string>
 
+    <string name="play_again_btn_text">Play Again</string>
 
-    <string name="player_name">Player Name</string>
-    <string name="submit">Submit</string>
-    <string name="rules_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sollicitudin urna a ultrices. Aliquam ornare leo ut neque rutrum, eget vestibulum diam hendrerit. Morbi non dui condimentum, vulputate quam at, bibendum dolor. Quisque nibh velit, aliquam sit amet placerat quis, fermentum at nulla. Praesent nec egestas est. Donec volutpat risus sed accumsan imperdiet. Suspendisse ultrices efficitur fringilla.\n\nProin sit amet mauris ex. Donec suscipit fringilla nibh quis iaculis. Vivamus sit amet efficitur sem, a sodales mi. Donec imperdiet aliquam lectus, at venenatis elit. Vivamus scelerisque rutrum nulla. Nulla tempor bibendum ex et sodales. Sed pretium urna ac velit dictum ornare. Aenean tristique erat nec tellus fermentum dictum. Aliquam consequat lorem egestas, suscipit ante mattis, ultricies metus. Cras maximus commodo lectus, sit amet vehicula felis lobortis nec. Etiam lacinia quis enim a malesuada. Nam luctus pretium risus vel volutpat. Vivamus in est in nunc gravida suscipit. Nulla in finibus orci, aliquet tincidunt quam. Suspendisse at justo dictum, sodales nisl semper, imperdiet lacus. Nullam commodo, ipsum ut convallis aliquet, lectus dui euismod augue, scelerisque ultrices dui nunc vitae dolor.\n\nDuis laoreet tellus quis neque tempus pellentesque. Sed at ultrices urna, ullamcorper tempor erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis aliquet fermentum risus, in sollicitudin lectus elementum sit amet. Aliquam erat volutpat. Aenean ac ante in leo cursus rhoncus. Praesent euismod massa a porttitor elementum. Donec nec egestas arcu, facilisis fringilla velit. Integer massa risus, vestibulum at urna non, aliquam tempor enim. Mauris suscipit aliquam ex at pellentesque. Curabitur elementum eros sit amet tortor vehicula euismod. Vestibulum quam purus, eleifend sit amet magna eu, porta pellentesque diam. Integer sodales ipsum lacus, quis suscipit est aliquam vitae. Etiam nunc mauris, condimentum id mollis ac, varius sit amet magna. Quisque non volutpat libero. Quisque condimentum augue eu porttitor hendrerit.\n\nProin sollicitudin pellentesque faucibus. Quisque sit amet sagittis lorem, eget luctus erat. Nullam finibus dui sit amet mi laoreet, ac hendrerit metus pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis tincidunt ex, eu viverra libero. Nulla aliquet, sapien vel molestie iaculis, urna nisi interdum lorem, ac blandit mi mi vel metus. Vestibulum ut odio aliquam, placerat mi et, tristique metus. Nam ac feugiat ante. Ut lobortis arcu massa, sit amet tincidunt justo luctus nec. Nullam faucibus rutrum purus, eget posuere massa efficitur et. Aenean hendrerit quam sapien, nec suscipit orci ultricies a. Ut eu eros vel nisl efficitur mollis sit amet et nulla. Praesent sed eros bibendum, bibendum lectus id, malesuada massa. Nunc pellentesque lacus a sapien convallis, eget fringilla libero pellentesque.\n\nInteger dapibus mollis justo vitae lobortis. Maecenas rhoncus ac risus eu consequat. Phasellus non velit quis mauris pretium gravida. Nam tristique lectus tellus, nec ornare quam tempus vitae. Vivamus dapibus et leo ac vestibulum. Nunc vestibulum turpis quis ligula efficitur rhoncus. Nunc hendrerit sapien felis, vel auctor nisl rhoncus vitae.\n\nCras blandit euismod faucibus. Vestibulum iaculis nisi ac orci porta, eu pellentesque dolor consequat. Phasellus eget ligula vestibulum, gravida mauris vel, commodo sem. Pellentesque euismod vulputate mi, eget finibus urna posuere consequat. Proin nulla odio, dictum at rutrum vel, rutrum id augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in tempor lorem, eu finibus diam. Nullam sit amet lacus bibendum, sagittis mi id, elementum tortor. Cras molestie neque sed neque egestas ultrices. Duis vel mi iaculis, porttitor eros in, finibus augue. Aliquam ultricies lacus nec erat mollis rutrum.</string>
-    <string name="last_score">Your last score:</string>
-    <string name="user_top_score">Your shortest time was:</string>
-    <string name="total_top_score">Shortest total time:</string>
-    <string name="new_personal_best">You have a new personal best!</string>
-    <string name="gold_label">Gold Medallist</string>
-    <string name="silver_label">Silver Medallist</string>
-    <string name="bronze_label">Bronze Medallist</string>
-    <string name="new_lead">You are in the top 3! Check the scores to see your rank.</string>
-    <string name="menu_button_handler">menu_click</string>
-    <string name="mine_cursor">DIG</string>
-    <string name="flag_cursor">FLAG</string>
-<!--    MENU BUTTON TAG VALUES  -->
+    <!--    MENU BUTTON TAG VALUES  -->
     <string name="main_btn_tag">main</string>
     <string name="scores_btn_tag">scores</string>
     <string name="play_btn_tag">play</string>
     <string name="close_btn_tag">close</string>
     <string name="rules_btn_tag">rules</string>
     <string name="end_btn_tag">end</string>
-    <!--    ENDSCREEN STRINGS   -->
-    <string name="win">Winner!</string>
-    <string name="lose">Good Try!</string>
+    <string name="menu_button_handler_name">menu_click</string>
 
-<!--    SCORE STRINGS   -->
+    <!--    ENDSCREEN STRINGS   -->
+    <string name="win_message">Winner!</string>
+    <string name="lose_message">Good Try!</string>
+
+    <!--    GAMEPLAY STRINGS        -->
+    <string name="mine_cursor_value">DIG</string>
+    <string name="flag_cursor_value">FLAG</string>
+
+    <string name="difficulty_easy_btn_text">Easy</string>
+    <string name="difficulty_medium_btn_text">Medium</string>
+
+    <!--    SCORE STRINGS   -->
+    <string name="reset_btn_text">reset</string>
     <string name="placeholder_name">Jimothy</string>
     <string name="placeholder_time">15:33.2</string>
-    <string name="reset">reset</string>
     <string name="placeholder_mines_count">10</string>
-    <string name="difficulty_easy_btn">Easy</string>
-    <string name="difficulty_medium_btn">Medium</string>
+
+    <!--    SCORE DISPLAY STRINGS -->
+    <string name="last_score_label">Your last score:</string>
+    <string name="user_top_score_label">Your shortest time was:</string>
+    <string name="total_top_score_label">Shortest total time:</string>
+    <string name="new_personal_best_message">You have a new personal best!</string>
+    <string name="gold_label">Gold Medallist</string>
+    <string name="silver_label">Silver Medallist</string>
+    <string name="bronze_label">Bronze Medallist</string>
+    <string name="new_lead_message">You are in the top 3! Check the scores to see your rank.</string>
 
 </resources>

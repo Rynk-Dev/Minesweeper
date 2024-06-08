@@ -1,25 +1,17 @@
 package dev.rynk.minesweeper;
 
 import static dev.rynk.minesweeper.utils.Constants.*;
-import static dev.rynk.minesweeper.utils.CursorMode.*;
-import static dev.rynk.minesweeper.utils.MathUtils.ticksToTime;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
 import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 import dev.rynk.minesweeper.databinding.ActivityPlayBinding;
 import dev.rynk.minesweeper.utils.CursorMode;
@@ -30,8 +22,6 @@ import dev.rynk.minesweeper.utils.TimerThread;
 public class Play extends BaseIOActivity {
     private TimerThread timer;
     int finishTime;
-    boolean gameOver = false;
-    boolean gameWon = false;
     private ActivityPlayBinding binding;
     private GameManager gm;
 
@@ -61,19 +51,26 @@ public class Play extends BaseIOActivity {
         timer.pauseTimer();
         finishTime = timer.getTicks();
         Bundle gameStats = bundleAndSaveGameStats(finishTime);
+
         Intent activityChangeIntent = new Intent (Play.this, Endscreen.class);
         activityChangeIntent.putExtras(gameStats);
-        startActivity(activityChangeIntent);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(activityChangeIntent);
+            }
+        }, EXPLOSION_DELAY);
+
     }
     private Bundle bundleAndSaveGameStats(int finishTime){
         boolean isNewPersonalBest = false;
-        if (gm.gameState){
+        if (gm.isGameWon){
             isNewPersonalBest = addScoresAndCheckIfPersonalBest(finishTime);
         }
         Bundle gameStats = new Bundle();
         gameStats.putString(NAME_KEY, getCurrentName());
         gameStats.putInt(TIME_KEY, finishTime);
-        gameStats.putBoolean(WON_KEY, gm.gameState);
+        gameStats.putBoolean(WON_KEY, gm.isGameWon);
         gameStats.putBoolean(PERSONAL_BEST_KEY, isNewPersonalBest);
         return gameStats;
     }

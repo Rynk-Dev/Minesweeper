@@ -75,7 +75,7 @@
         <item name="android:padding">@dimen/menu_button_padding</item>
         <item name="android:paddingStart">@dimen/menu_horizontal_padding</item>
         <item name="android:paddingEnd">@dimen/menu_horizontal_padding</item>
-        <item name="android:onClick">@string/menu_button_handler</item>
+        <item name="android:onClick">@string/menu_button_handler_name</item>
         <item name="backgroundTint">@color/darkest_blue</item>
     </style>
 
@@ -111,12 +111,12 @@
 <!--    SCORES STYLES   -->
     <style name="score_label" parent="wrapped.left">
         <item name="android:textSize">@dimen/text_size_3</item>
-        <item name="android:layout_marginTop">@dimen/score_label_top_margin</item>
+        <item name="android:layout_marginTop">@dimen/stat_label_top_margin</item>
     </style>
 
     <style name="score_name" parent="subheading.left">
-        <item name="android:paddingLeft">@dimen/score_box_left_padding</item>
-        <item name="android:layout_marginTop">@dimen/score_row_top_margin</item>
+        <item name="android:paddingLeft">@dimen/stat_box_left_padding</item>
+        <item name="android:layout_marginTop">@dimen/stat_row_top_margin</item>
         <item name="android:text">@string/placeholder_name</item>
     </style>
 
@@ -144,7 +144,7 @@
 <!--    PLAY ACTIVITY STYLES-->
     <style name="stat_box" parent="wrapped.left">
         <item name="android:background">@drawable/score_border</item>
-        <item name="android:paddingStart">@dimen/score_box_left_padding</item>
+        <item name="android:paddingStart">@dimen/stat_box_left_padding</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_marginBottom">@dimen/stat_box_margin</item>
     </style>

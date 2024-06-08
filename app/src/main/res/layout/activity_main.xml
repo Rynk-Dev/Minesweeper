@@ -45,8 +45,8 @@
         android:id="@+id/difficulty_button"
         style="@style/menu_button"
         android:textColor="@color/white"
-        android:textOn="@string/difficulty_medium_btn"
-        android:textOff="@string/difficulty_easy_btn"
+        android:textOn="@string/difficulty_medium_btn_text"
+        android:textOff="@string/difficulty_easy_btn_text"
         app:layout_constraintBottom_toTopOf="@+id/button4" />
 
 <!--    MENU BUTTONS        -->
@@ -55,7 +55,7 @@
         android:id="@+id/button4"
         style="@style/menu_button_icon"
         android:tag="@string/play_btn_tag"
-        android:text="@string/play_btn_text"
+        android:text="@string/play_title"
         app:icon="@drawable/play"
         app:layout_constraintBottom_toTopOf="@+id/button6" />
 
@@ -71,7 +71,7 @@
         android:id="@+id/button5"
         style="@style/menu_button_icon"
         android:tag="@string/scores_btn_tag"
-        android:text="@string/scores_btn_text"
+        android:text="@string/scores_title"
         app:icon="@drawable/medal"
         app:layout_constraintBottom_toBottomOf="parent" />
 

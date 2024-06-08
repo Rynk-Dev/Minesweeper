@@ -26,20 +26,15 @@ public class Constants {
     public static final String DIFFICULTY_KEY = "difficulty";
 
     public static final int START_TIME = 0;
-
+    public static final int EXPLOSION_DELAY = 1000;
+    public static final int EXPOSE_ALL_DELAY = 3000;
     public static final int ROWS_SMALL = 9;
     public static final int COLS_SMALL = 9;
     public static final int MINES_SMALL = 10;
     public static final int ROWS_MEDIUM = 18;
     public static final int COLS_MEDIUM = 9;
     public static final int MINES_MEDIUM = 25;
-    public static final int COORDINATE_ERROR = -1;
-
-    public static final boolean HAS_MINE = true;
-    public static final boolean NO_MINE = false;
     public static final int NO_NEARBY_MINES = 0;
-    public static final boolean GAME_WON = true;
-    public static boolean GAME_LOST = false;
     public static final int[][] NEIGHBOR_COORDS = {{-1,0,1},{-1,0,1}};
     public static final int ROW_INDEX = 0;
     public static final int COL_INDEX = 1;

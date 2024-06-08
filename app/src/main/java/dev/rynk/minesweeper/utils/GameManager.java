@@ -1,10 +1,10 @@
 package dev.rynk.minesweeper.utils;
 
-import static android.os.SystemClock.sleep;
 import static dev.rynk.minesweeper.utils.Constants.*;
 import static dev.rynk.minesweeper.utils.CursorMode.*;
 
 import android.content.Context;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
@@ -24,7 +24,7 @@ public class GameManager{
     private int tileSize;
     private boolean firstMove;
     private GridLayout gameBoard;
-    public boolean gameState;
+    public boolean isGameWon;
     private CursorMode cursorMode = FLAG;
     private int numUnknown;
     private ActivityPlayBinding binding;
@@ -33,7 +33,7 @@ public class GameManager{
     public GameManager(String difficulty, Context context, ActivityPlayBinding binding) {
         setDifficultySettings(difficulty);
         numCells = cols * rows;
-        gameState = false;
+        isGameWon = false;
         numUnknown = numCells;
         firstMove = true;
         numMinesRemaining = numMinesTotal;
@@ -145,7 +145,7 @@ public class GameManager{
         if (numMinesRemaining == 0){
             numUnknown = getNumUnknownTiles();
             if (numUnknown == 0) {
-                gameState = GAME_WON;
+                isGameWon = true;
                 endGame();
             }
         }
@@ -162,7 +162,7 @@ public class GameManager{
         return numUnknownTiles;
     }
     private void endGame(){
-        exposeAllMines(gameState);
+        exposeAllMines(isGameWon);
         gameEndButton.performClick();
     }
 
@@ -171,10 +171,11 @@ public class GameManager{
         if (winStatus){
             mineState = State.UNEXPLODED;
         }
+        State finalMineState = mineState;
         for (Tile[] tileRow : tiles){
             for (Tile cell : tileRow){
                 if (cell.getHasMine()){
-                    cell.setState(mineState);
+                    cell.setState(finalMineState);
 
                 }
             }
