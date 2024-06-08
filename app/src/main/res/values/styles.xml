@@ -16,7 +16,7 @@
     </style>
 
     <style name="span">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
@@ -142,18 +142,14 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="Widget.Theme.Minesweeper.Tile" parent="">
-        <item name="android:background">@color/gray_400</item>
-        <item name="exampleColor">@color/light_blue_400</item>
-    </style>
+<!--    <style name="Widget.Theme.Minesweeper.Tile" parent="">-->
+<!--        <item name="android:background">@color/gray_400</item>-->
+<!--        <item name="exampleColor">@color/light_blue_400</item>-->
+<!--    </style>-->
 
-    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="iconPadding">0dp</item>
-        <item name="android:insetTop">0dp</item>
-        <item name="android:insetBottom">0dp</item>
-        <item name="android:paddingLeft">12dp</item>
-        <item name="android:paddingRight">12dp</item>
-        <item name="android:minWidth">48dp</item>
-        <item name="android:minHeight">48dp</item>
+    <style name="cursor_selector">
+        <item name="android:layout_width">@dimen/score_icon_size</item>
+        <item name="android:layout_height">@dimen/score_icon_size</item>
+        <item name="android:button">@null</item>
     </style>
 </resources>

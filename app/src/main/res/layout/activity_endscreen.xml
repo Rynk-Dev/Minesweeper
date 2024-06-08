@@ -16,11 +16,12 @@
             android:text="@string/win"
             />
     </LinearLayout>
+<!--    PLAYER_SCORE        -->
     <RelativeLayout style="@style/linear_child.1">
         <TextView
             android:id="@+id/user_name"
             style="@style/score_name"
-            android:text="todd"
+            android:text="@string/placeholder_name"
             />
         <ImageView
             style="@style/score_icon"
@@ -29,24 +30,25 @@
         <TextView
             android:id="@+id/user_time"
             style="@style/score_time"
-            android:text="15:33"
+            android:text="@string/placeholder_time"
             />
     </RelativeLayout>
+<!--    MENU OPTIONS        -->
     <LinearLayout style="@style/linear_child.vert.3">
         <Button
             style="@style/menu_button_icon"
-            android:text="@string/play_again"
+            android:text="@string/play_again_btn_text"
             app:icon="@drawable/play"
-            android:tag="play"/>
+            android:tag="@string/play_btn_tag"/>
         <Button
             style="@style/menu_button_icon"
-            android:text="@string/scores"
+            android:text="@string/scores_btn_text"
             app:icon="@drawable/medal"
-            android:tag="scores"/>
+            android:tag="@string/scores_btn_tag"/>
         <Button
             style="@style/menu_button_icon"
-            android:text="@string/menu"
+            android:text="@string/menu_btn_text"
             app:icon="@drawable/home"
-            android:tag="main"/>
+            android:tag="@string/main_btn_tag"/>
     </LinearLayout>
 </LinearLayout>

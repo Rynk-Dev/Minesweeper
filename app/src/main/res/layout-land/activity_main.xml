@@ -44,7 +44,7 @@
         android:gravity="center">
             <Button
                 style="@style/menu_button_icon_land"
-                android:text="@string/play"
+                android:text="@string/play_btn_text"
                 android:layout_row="0"
                 android:layout_column="0"
                 android:layout_columnSpan="2"
@@ -54,12 +54,12 @@
                 android:layout_row="1"
                 android:layout_column="0"
                 android:layout_columnWeight="1"
-                android:text="@string/rules" />
+                android:text="@string/rules_title" />
             <Button
                 style="@style/menu_button_icon_land"
                 android:layout_row="1"
                 android:layout_columnWeight="1"
-                android:text="@string/scores" />
+                android:text="@string/scores_btn_text" />
 
 
 

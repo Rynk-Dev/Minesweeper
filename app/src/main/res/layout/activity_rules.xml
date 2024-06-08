@@ -3,41 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     tools:context=".Rules"
-    style="@style/bg"
-    >
+    style="@style/bg">
+<!--    NAVBAR      -->
     <RelativeLayout style="@style/navbar"
-        android:id="@+id/navbar"
-        >
+        android:id="@+id/navbar">
         <ImageButton
             android:id="@+id/close_button"
             style="@style/nav_button"
             android:background="@drawable/close"
             android:layout_alignParentStart="true"
-            android:tag="close"
-            />
+            android:tag="@string/close_btn_tag" />
         <TextView style="@style/nav_title"
-            android:text="@string/rules"
-            />
-        <!--<ImageButton
-            android:id="@+id/play_button"
-            style="@style/nav_button"
-            android:background="@drawable/play"
-            android:layout_alignParentEnd="true"
-            android:tag="play"
-        />-->
+            android:text="@string/rules_title" />
     </RelativeLayout>
+<!--    RULES       -->
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollbars="vertical"
     android:layout_marginBottom="@dimen/rules_bottom_margin"
-    android:layout_below="@id/navbar"
->
+    android:layout_below="@id/navbar">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/rules_text"/>
-
 </ScrollView>
-
 </RelativeLayout>

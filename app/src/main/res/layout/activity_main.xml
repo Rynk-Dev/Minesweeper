@@ -26,7 +26,7 @@
             android:layout_height="@dimen/name_input_height"
             android:background="@drawable/score_border"
             android:inputType="text"
-            android:text=""
+            android:text="@string/placeholder_name"
             android:gravity="center"
             android:imeOptions="actionDone"
             android:textSize="@dimen/text_size_3">
@@ -37,19 +37,19 @@
     <LinearLayout style="@style/linear_child.vert.3">
         <Button
             style="@style/menu_button_icon"
-            android:text="@string/play"
+            android:text="@string/play_btn_text"
             app:icon="@drawable/play"
-            android:tag="play"
+            android:tag="@string/play_btn_tag"
             />
         <Button
             style="@style/menu_button_icon"
-            android:text="@string/rules"
+            android:text="@string/rules_title"
             app:icon="@drawable/help"
-            android:tag="rules"/>
+            android:tag="@string/rules_btn_tag"/>
         <Button
             style="@style/menu_button_icon"
-            android:text="@string/scores"
+            android:text="@string/scores_btn_text"
             app:icon="@drawable/medal"
-            android:tag="scores"/>
+            android:tag="@string/scores_btn_tag"/>
     </LinearLayout>
 </LinearLayout>

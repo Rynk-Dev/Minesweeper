@@ -13,19 +13,18 @@
             android:id="@+id/home_button"
             style="@style/nav_button.start"
             android:background="@drawable/home"
-            android:tag="main"
+            android:tag="@string/main_btn_tag"
             />
         <TextView style="@style/nav_title"
-            android:text="@string/scores"
+            android:text="@string/scores_btn_text"
             />
         <ImageButton
             android:id="@+id/play_button"
             style="@style/nav_button.end"
             android:background="@drawable/play"
-            android:tag="play"
+            android:tag="@string/play_btn_tag"
             />
     </RelativeLayout>
-
 
 <!--    CURRENT SCORE       -->
     <TextView
@@ -40,7 +39,7 @@
         <TextView
             android:id="@+id/user_name"
             style="@style/score_name"
-            android:text="todd"
+            android:text="@string/placeholder_name"
             />
         <ImageView
             style="@style/score_icon"
@@ -49,7 +48,7 @@
         <TextView
             android:id="@+id/user_time"
             style="@style/score_time"
-            android:text="15:33"
+            android:text="@string/placeholder_time"
             />
     </RelativeLayout>
 
@@ -66,7 +65,7 @@
         <TextView
             style="@style/score_name"
             android:id="@+id/top_user_name"
-            android:text="todd"
+            android:text="@string/placeholder_name"
             />
         <ImageView
             style="@style/score_icon"
@@ -75,7 +74,7 @@
         <TextView
             android:id="@+id/top_user_time"
             style="@style/score_time"
-            android:text="15:33"
+            android:text="@string/placeholder_time"
             />
     </RelativeLayout>
     <!--    TOTAL HIGH SCORE      -->
@@ -91,7 +90,7 @@
         <TextView
             style="@style/score_name"
             android:id="@+id/gold_user_name"
-            android:text="todd"
+            android:text="@string/placeholder_name"
             />
         <ImageView
             style="@style/score_icon"
@@ -100,7 +99,7 @@
         <TextView
             android:id="@+id/gold_user_time"
             style="@style/score_time"
-            android:text="15:33"
+            android:text="@string/placeholder_time"
             />
     </RelativeLayout>
     <!--    TOTAL HIGH SCORE      -->
@@ -116,7 +115,7 @@
         <TextView
             style="@style/score_name"
             android:id="@+id/silver_user_name"
-            android:text="todd"
+            android:text="@string/placeholder_name"
             />
         <ImageView
             style="@style/score_icon"
@@ -125,7 +124,7 @@
         <TextView
             android:id="@+id/silver_user_time"
             style="@style/score_time"
-            android:text="15:33"
+            android:text="@string/placeholder_time"
             />
     </RelativeLayout>
     <!--    TOTAL HIGH SCORE      -->
@@ -141,7 +140,7 @@
         <TextView
             style="@style/score_name"
             android:id="@+id/bronze_user_name"
-            android:text="todd"
+            android:text="@string/placeholder_name"
             />
         <ImageView
             style="@style/score_icon"
@@ -150,7 +149,7 @@
         <TextView
             android:id="@+id/bronze_user_time"
             style="@style/score_time"
-            android:text="15:33"
+            android:text="@string/placeholder_time"
             />
     </RelativeLayout>
     <Button
@@ -158,5 +157,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="reset"/>
+        android:text="@string/reset"/>
 </RelativeLayout>
