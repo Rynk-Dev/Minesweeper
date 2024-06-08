@@ -1,9 +1,5 @@
 <resources>
     <declare-styleable name="Tile">
-        <attr name="exampleString" format="string" />
-        <attr name="exampleDimension" format="dimension" />
-        <attr name="exampleColor" format="color" />
-        <attr name="exampleDrawable" format="color|reference" />
         <attr name="row" format="integer" />
         <attr name="col" format="integer" />
         <attr name="state" format="string" />
