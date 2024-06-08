@@ -1,54 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     style="@style/bg"
     android:orientation="vertical"
     tools:context=".Endscreen">
-    <ImageView style="@style/linear_child.poster"
+    <ImageView
         android:id="@+id/logo"
+        style="@style/linear_child.poster"
         android:src="@drawable/trophy"
-        />
-    <LinearLayout style="@style/linear_child.1">
-        <TextView style="@style/title"
-            android:id="@+id/game_status"
-            android:text="@string/win"
-            />
-    </LinearLayout>
-<!--    PLAYER_SCORE        -->
-    <RelativeLayout style="@style/linear_child.1">
-        <TextView
-            android:id="@+id/user_name"
-            style="@style/score_name"
-            android:text="@string/placeholder_name"
-            />
-        <ImageView
-            style="@style/score_icon"
-            android:layout_toStartOf="@id/user_time"
-            />
-        <TextView
-            android:id="@+id/user_time"
-            style="@style/score_time"
-            android:text="@string/placeholder_time"
-            />
-    </RelativeLayout>
-<!--    MENU OPTIONS        -->
-    <LinearLayout style="@style/linear_child.vert.3">
-        <Button
-            style="@style/menu_button_icon"
-            android:text="@string/play_again_btn_text"
-            app:icon="@drawable/play"
-            android:tag="@string/play_btn_tag"/>
-        <Button
-            style="@style/menu_button_icon"
-            android:text="@string/scores_btn_text"
-            app:icon="@drawable/medal"
-            android:tag="@string/scores_btn_tag"/>
-        <Button
-            style="@style/menu_button_icon"
-            android:text="@string/menu_btn_text"
-            app:icon="@drawable/home"
-            android:tag="@string/main_btn_tag"/>
-    </LinearLayout>
-</LinearLayout>
+        app:layout_constraintBottom_toTopOf="@+id/game_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/nav_bottom_margin"/>
+    <Button
+        android:id="@+id/button"
+        style="@style/menu_button_icon"
+        android:tag="@string/main_btn_tag"
+        android:text="@string/menu_btn_text"
+        app:icon="@drawable/home"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/button3"
+        style="@style/menu_button_icon"
+        android:tag="@string/scores_btn_tag"
+        android:text="@string/scores_btn_text"
+        app:icon="@drawable/medal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/button2"
+        style="@style/menu_button_icon"
+        android:tag="@string/play_btn_tag"
+        android:text="@string/play_again_btn_text"
+        app:icon="@drawable/play"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        style="@style/score_icon"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/user_time"
+        app:layout_constraintTop_toBottomOf="@+id/game_status" />
+    <TextView
+        android:id="@+id/user_time"
+        style="@style/score_time"
+        android:text="@string/placeholder_time"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_status" />
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/score_name"
+        android:text="@string/placeholder_name"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_status" />
+    <TextView
+        android:id="@+id/game_status"
+        style="@style/title"
+        android:text="@string/win"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

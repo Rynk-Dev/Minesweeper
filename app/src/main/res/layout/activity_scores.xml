@@ -26,63 +26,71 @@
             />
     </RelativeLayout>
 
-<!--    CURRENT SCORE       -->
+<!--    LAST WINNING SCORE       -->
     <TextView
         android:id="@+id/score_label"
         style="@style/score_label"
         android:text="@string/last_score"
         android:layout_below="@id/navbar"/>
 
-    <RelativeLayout style="@style/span"
-        android:id="@+id/last_score"
-        android:layout_below="@id/score_label">
+<!--    <RelativeLayout style="@style/span"-->
+<!--        android:id="@+id/last_score"-->
+<!--        android:layout_below="@id/score_label">-->
         <TextView
             android:id="@+id/user_name"
             style="@style/score_name"
             android:text="@string/placeholder_name"
+            android:layout_below="@id/score_label"
             />
         <ImageView
             style="@style/score_icon"
             android:layout_toStartOf="@id/user_time"
+            android:layout_alignBottom="@id/user_name"
             />
         <TextView
             android:id="@+id/user_time"
             style="@style/score_time"
             android:text="@string/placeholder_time"
+            android:layout_alignBottom="@id/user_name"
+
             />
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 <!--    USER HIGH SCORE      -->
     <TextView
-        android:id="@+id/top_score_label"
+        android:id="@+id/user_top_label"
         style="@style/score_label"
         android:text="@string/user_top_score"
-        android:layout_below="@id/last_score"/>
+        android:layout_below="@id/user_name"/>
 
-    <RelativeLayout style="@style/span"
-        android:id="@+id/top_score"
-        android:layout_below="@id/top_score_label">
+<!--    <RelativeLayout style="@style/span"-->
+<!--        android:id="@+id/top_score"-->
+<!--        android:layout_below="@id/top_score_label">-->
         <TextView
             style="@style/score_name"
-            android:id="@+id/top_user_name"
+            android:id="@+id/user_top_name"
             android:text="@string/placeholder_name"
+            android:layout_below="@id/user_top_label"
             />
         <ImageView
             style="@style/score_icon"
-            android:layout_toStartOf="@id/top_user_time"
+            android:layout_toStartOf="@id/user_time"
+            android:layout_alignBottom="@id/user_top_name"
             />
         <TextView
-            android:id="@+id/top_user_time"
+            android:id="@+id/user_top_time"
             style="@style/score_time"
             android:text="@string/placeholder_time"
+            android:layout_alignBottom="@id/user_top_name"
+
             />
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
     <!--    TOTAL HIGH SCORE      -->
     <TextView
         android:id="@+id/gold_score_label"
         style="@style/score_label"
         android:text="@string/gold_label"
-        android:layout_below="@id/top_score"/>
+        android:layout_below="@id/user_top_name"/>
 
     <RelativeLayout style="@style/span"
         android:id="@+id/gold_score"
@@ -120,6 +128,7 @@
         <ImageView
             style="@style/score_icon"
             android:layout_toStartOf="@id/silver_user_time"
+            lay
             />
         <TextView
             android:id="@+id/silver_user_time"

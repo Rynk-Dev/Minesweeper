@@ -1,55 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     style="@style/bg"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    >
-    <ImageView style="@style/linear_child.poster"
-        android:id="@+id/logo"
-        android:src="@drawable/mine_icon"
-        />
-    <LinearLayout style="@style/linear_child.vert.1">
-        <TextView
-            android:text="@string/title"
-            style="@style/title" />
-    </LinearLayout>
-    <LinearLayout style="@style/linear_child.vert.1">
-        <TextView style="@style/subheading"
-            android:text="@string/player_name"
-            />
-        <EditText
-            android:id="@+id/name_input"
-            android:layout_width="@dimen/name_input_width"
-            android:layout_height="@dimen/name_input_height"
-            android:background="@drawable/score_border"
-            android:inputType="text"
-            android:text="@string/placeholder_name"
-            android:gravity="center"
-            android:imeOptions="actionDone"
-            android:textSize="@dimen/text_size_3">
-            <requestFocus/>
-        </EditText>
+    tools:context=".MainActivity">
 
-    </LinearLayout>
-    <LinearLayout style="@style/linear_child.vert.3">
-        <Button
-            style="@style/menu_button_icon"
-            android:text="@string/play_btn_text"
-            app:icon="@drawable/play"
-            android:tag="@string/play_btn_tag"
-            />
-        <Button
-            style="@style/menu_button_icon"
-            android:text="@string/rules_title"
-            app:icon="@drawable/help"
-            android:tag="@string/rules_btn_tag"/>
-        <Button
-            style="@style/menu_button_icon"
-            android:text="@string/scores_btn_text"
-            app:icon="@drawable/medal"
-            android:tag="@string/scores_btn_tag"/>
-    </LinearLayout>
-</LinearLayout>
+    <ImageView
+        android:id="@+id/logo"
+        style="@style/linear_child.poster"
+        android:src="@drawable/mine_icon"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/nav_bottom_margin"/>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/title"
+        android:text="@string/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/subheading"
+        android:text="@string/player_name"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="@dimen/name_input_width"
+        android:layout_height="@dimen/name_input_height"
+        android:background="@drawable/score_border"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:text="@string/placeholder_name"
+        android:textSize="@dimen/text_size_3"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/menu_button_icon"
+        android:tag="@string/play_btn_tag"
+        android:text="@string/play_btn_text"
+        app:icon="@drawable/play"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/menu_button_icon"
+        android:tag="@string/rules_btn_tag"
+        android:text="@string/rules_title"
+        app:icon="@drawable/help"
+        app:layout_constraintBottom_toTopOf="@id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/menu_button_icon"
+        android:tag="@string/scores_btn_tag"
+        android:text="@string/scores_btn_text"
+        app:icon="@drawable/medal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
