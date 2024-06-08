@@ -53,8 +53,8 @@ public class Scores extends BaseIOActivity {
     private void updateViews() {
         binding.userName.setText(currentName);
         binding.userTime.setText(ticksToTime(previousTime));
-        binding.topUserName.setText(currentName);
-        binding.topUserTime.setText(ticksToTime(personalBest));
+        binding.userTopName.setText(currentName);
+        binding.userTopTime.setText(ticksToTime(personalBest));
         binding.goldUserName.setText(leaderboardNames[GOLD.index]);
         binding.goldUserTime.setText(ticksToTime(leaderboardTimes[GOLD.index]));
         binding.silverUserName.setText(leaderboardNames[SILVER.index]);

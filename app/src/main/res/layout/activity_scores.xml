@@ -1,170 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    tools:context=".Rules"
     style="@style/bg"
+    tools:context=".Rules"
+    tools:ignore="MissingConstraints, ContentDescription"
     >
-    <RelativeLayout
-        android:id="@+id/navbar"
-        style="@style/navbar"
-        >
-        <ImageButton
-            android:id="@+id/home_button"
-            style="@style/nav_button.start"
-            android:background="@drawable/home"
-            android:tag="@string/main_btn_tag"
-            />
-        <TextView style="@style/nav_title"
-            android:text="@string/scores_btn_text"
-            />
-        <ImageButton
-            android:id="@+id/play_button"
-            style="@style/nav_button.end"
-            android:background="@drawable/play"
-            android:tag="@string/play_btn_tag"
-            />
-    </RelativeLayout>
 
-<!--    LAST WINNING SCORE       -->
+    <ImageButton
+        android:id="@+id/home_button"
+        style="@style/nav_button.start"
+        android:background="@drawable/home"
+        android:tag="@string/main_btn_tag"
+        app:layout_constraintBottom_toTopOf="@id/score_label"
+        />
+
+    <TextView
+        android:id="@+id/scores_title_view"
+        style="@style/top_title"
+        android:text="@string/scores_btn_text" />
+
+    <ImageButton
+        android:id="@+id/play_button"
+        style="@style/nav_button.end"
+        android:background="@drawable/play"
+        android:tag="@string/play_btn_tag" />
+
+    <!--    LAST WINNING SCORE       -->
     <TextView
         android:id="@+id/score_label"
         style="@style/score_label"
         android:text="@string/last_score"
-        android:layout_below="@id/navbar"/>
+        app:layout_constraintTop_toBottomOf="@+id/home_button"
+        app:layout_constraintBottom_toTopOf="@id/user_name"/>
 
-<!--    <RelativeLayout style="@style/span"-->
-<!--        android:id="@+id/last_score"-->
-<!--        android:layout_below="@id/score_label">-->
-        <TextView
-            android:id="@+id/user_name"
-            style="@style/score_name"
-            android:text="@string/placeholder_name"
-            android:layout_below="@id/score_label"
-            />
-        <ImageView
-            style="@style/score_icon"
-            android:layout_toStartOf="@id/user_time"
-            android:layout_alignBottom="@id/user_name"
-            />
-        <TextView
-            android:id="@+id/user_time"
-            style="@style/score_time"
-            android:text="@string/placeholder_time"
-            android:layout_alignBottom="@id/user_name"
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/score_name"
+        app:layout_constraintTop_toBottomOf="@id/score_label" />
 
-            />
-<!--    </RelativeLayout>-->
+    <ImageView
+        android:id="@+id/imageView2"
+        style="@style/score_icon"
+        app:layout_constraintBottom_toBottomOf="@id/user_time"
+        app:layout_constraintEnd_toStartOf="@id/user_time"
+        app:layout_constraintTop_toTopOf="@id/user_time" />
 
-<!--    USER HIGH SCORE      -->
+    <TextView
+        android:id="@+id/user_time"
+        style="@style/score_time"
+        app:layout_constraintBottom_toBottomOf="@id/user_name"
+        app:layout_constraintTop_toTopOf="@id/user_name" />
+
+    <!--    USER HIGH SCORE      -->
     <TextView
         android:id="@+id/user_top_label"
         style="@style/score_label"
         android:text="@string/user_top_score"
-        android:layout_below="@id/user_name"/>
+        app:layout_constraintTop_toBottomOf="@id/user_name" />
 
-<!--    <RelativeLayout style="@style/span"-->
-<!--        android:id="@+id/top_score"-->
-<!--        android:layout_below="@id/top_score_label">-->
-        <TextView
-            style="@style/score_name"
-            android:id="@+id/user_top_name"
-            android:text="@string/placeholder_name"
-            android:layout_below="@id/user_top_label"
-            />
-        <ImageView
-            style="@style/score_icon"
-            android:layout_toStartOf="@id/user_time"
-            android:layout_alignBottom="@id/user_top_name"
-            />
-        <TextView
-            android:id="@+id/user_top_time"
-            style="@style/score_time"
-            android:text="@string/placeholder_time"
-            android:layout_alignBottom="@id/user_top_name"
+    <TextView
+        android:id="@+id/user_top_name"
+        style="@style/score_name"
+        app:layout_constraintTop_toBottomOf="@id/user_top_label" />
 
-            />
-<!--    </RelativeLayout>-->
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/score_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/user_top_name"
+        app:layout_constraintEnd_toStartOf="@+id/user_top_time"
+        app:layout_constraintTop_toTopOf="@+id/user_top_name" />
+
+    <TextView
+        android:id="@+id/user_top_time"
+        style="@style/score_time"
+        app:layout_constraintBottom_toBottomOf="@+id/user_top_name"
+        app:layout_constraintTop_toTopOf="@+id/user_top_name" />
+
     <!--    TOTAL HIGH SCORE      -->
     <TextView
         android:id="@+id/gold_score_label"
         style="@style/score_label"
         android:text="@string/gold_label"
-        android:layout_below="@id/user_top_name"/>
+        app:layout_constraintTop_toBottomOf="@+id/user_top_name" />
 
-    <RelativeLayout style="@style/span"
-        android:id="@+id/gold_score"
-        android:layout_below="@id/gold_score_label">
-        <TextView
-            style="@style/score_name"
-            android:id="@+id/gold_user_name"
-            android:text="@string/placeholder_name"
-            />
-        <ImageView
-            style="@style/score_icon"
-            android:layout_toStartOf="@id/gold_user_time"
-            />
-        <TextView
-            android:id="@+id/gold_user_time"
-            style="@style/score_time"
-            android:text="@string/placeholder_time"
-            />
-    </RelativeLayout>
-    <!--    TOTAL HIGH SCORE      -->
+    <TextView
+        android:id="@+id/gold_user_name"
+        style="@style/score_name"
+        app:layout_constraintTop_toBottomOf="@+id/gold_score_label" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        style="@style/score_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/gold_user_name"
+        app:layout_constraintEnd_toStartOf="@+id/gold_user_time"
+        app:layout_constraintTop_toTopOf="@+id/gold_user_name" />
+
+    <TextView
+        android:id="@+id/gold_user_time"
+        style="@style/score_time"
+        app:layout_constraintBottom_toBottomOf="@+id/gold_user_name"
+        app:layout_constraintTop_toTopOf="@+id/gold_user_name" />
+    <!--    2ND HIGH SCORE      -->
     <TextView
         android:id="@+id/silver_score_label"
         style="@style/score_label"
         android:text="@string/silver_label"
-        android:layout_below="@id/gold_score"/>
+        app:layout_constraintTop_toBottomOf="@+id/gold_user_name" />
 
-    <RelativeLayout style="@style/span"
-        android:id="@+id/silver_score"
-        android:layout_below="@id/silver_score_label">
-        <TextView
-            style="@style/score_name"
-            android:id="@+id/silver_user_name"
-            android:text="@string/placeholder_name"
-            />
-        <ImageView
-            style="@style/score_icon"
-            android:layout_toStartOf="@id/silver_user_time"
-            lay
-            />
-        <TextView
-            android:id="@+id/silver_user_time"
-            style="@style/score_time"
-            android:text="@string/placeholder_time"
-            />
-    </RelativeLayout>
-    <!--    TOTAL HIGH SCORE      -->
+    <TextView
+        android:id="@+id/silver_user_name"
+        style="@style/score_name"
+        app:layout_constraintTop_toBottomOf="@+id/silver_score_label" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        style="@style/score_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/silver_user_name"
+        app:layout_constraintEnd_toStartOf="@+id/silver_user_time"
+        app:layout_constraintTop_toTopOf="@+id/silver_user_name" />
+
+    <TextView
+        android:id="@+id/silver_user_time"
+        style="@style/score_time"
+        app:layout_constraintBottom_toBottomOf="@+id/silver_user_name"
+        app:layout_constraintTop_toTopOf="@+id/silver_user_name" />
+    <!--    3RD HIGH SCORE      -->
     <TextView
         android:id="@+id/bronze_score_label"
         style="@style/score_label"
         android:text="@string/bronze_label"
-        android:layout_below="@id/silver_score"/>
+        app:layout_constraintTop_toBottomOf="@+id/silver_user_name" />
 
-    <RelativeLayout style="@style/span"
-        android:id="@+id/total_top_score"
-        android:layout_below="@id/bronze_score_label">
-        <TextView
-            style="@style/score_name"
-            android:id="@+id/bronze_user_name"
-            android:text="@string/placeholder_name"
-            />
-        <ImageView
-            style="@style/score_icon"
-            android:layout_toStartOf="@id/bronze_user_time"
-            />
-        <TextView
-            android:id="@+id/bronze_user_time"
-            style="@style/score_time"
-            android:text="@string/placeholder_time"
-            />
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/bronze_user_name"
+        style="@style/score_name"
+        app:layout_constraintTop_toBottomOf="@+id/bronze_score_label" />
+
+    <ImageView
+        style="@style/score_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/bronze_user_name"
+        app:layout_constraintEnd_toStartOf="@+id/bronze_user_time"
+        app:layout_constraintTop_toTopOf="@+id/bronze_user_name" />
+
+    <TextView
+        android:id="@+id/bronze_user_time"
+        style="@style/score_time"
+        app:layout_constraintBottom_toBottomOf="@+id/bronze_user_name"
+        app:layout_constraintTop_toTopOf="@+id/bronze_user_name"
+         />
+    <!--    RESET BUTTON        -->
     <Button
         android:id="@+id/debug_reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="@string/reset"/>
-</RelativeLayout>
+        style="@style/menu_button"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,69 +5,59 @@
     android:id="@+id/main"
     style="@style/bg"
     android:orientation="vertical"
-    tools:context=".Endscreen">
+    tools:context=".Endscreen"
+    tools:ignore="MissingConstraints, ContentDescription">
+<!--    HERO    -->
     <ImageView
         android:id="@+id/logo"
-        style="@style/linear_child.poster"
+        style="@style/hero"
         android:src="@drawable/trophy"
         app:layout_constraintBottom_toTopOf="@+id/game_status"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="@dimen/nav_bottom_margin"/>
-    <Button
-        android:id="@+id/button"
-        style="@style/menu_button_icon"
-        android:tag="@string/main_btn_tag"
-        android:text="@string/menu_btn_text"
-        app:icon="@drawable/home"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-    <Button
-        android:id="@+id/button3"
-        style="@style/menu_button_icon"
-        android:tag="@string/scores_btn_tag"
-        android:text="@string/scores_btn_text"
-        app:icon="@drawable/medal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:tint="@color/darkest_blue"/>
+<!--    TITLE   -->
+    <TextView
+        android:id="@+id/game_status"
+        style="@style/banner_title"
+        android:text="@string/win"
+        app:layout_constraintVertical_bias="0.5" />
+<!--    SCORE   -->
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/score_name"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/game_status" />
+    <ImageView
+        style="@style/score_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/user_name"
+        app:layout_constraintEnd_toStartOf="@+id/user_time"
+        app:layout_constraintTop_toTopOf="@+id/user_name" />
+    <TextView
+        android:id="@+id/user_time"
+        style="@style/score_time"
+        app:layout_constraintBottom_toBottomOf="@+id/user_name"
+        app:layout_constraintTop_toTopOf="@+id/user_name" />
+
+<!--    MENU BUTTONS    -->
     <Button
         android:id="@+id/button2"
         style="@style/menu_button_icon"
         android:tag="@string/play_btn_tag"
         android:text="@string/play_again_btn_text"
         app:icon="@drawable/play"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-    <ImageView
-        style="@style/score_icon"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/user_time"
-        app:layout_constraintTop_toBottomOf="@+id/game_status" />
-    <TextView
-        android:id="@+id/user_time"
-        style="@style/score_time"
-        android:text="@string/placeholder_time"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_status" />
-    <TextView
-        android:id="@+id/user_name"
-        style="@style/score_name"
-        android:text="@string/placeholder_name"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_status" />
-    <TextView
-        android:id="@+id/game_status"
-        style="@style/title"
-        android:text="@string/win"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintBottom_toTopOf="@+id/button" />
+    <Button
+        android:id="@+id/button"
+        style="@style/menu_button_icon"
+        android:tag="@string/main_btn_tag"
+        android:text="@string/menu_btn_text"
+        app:icon="@drawable/home"
+        app:layout_constraintBottom_toTopOf="@+id/button3" />
+    <Button
+        android:id="@+id/button3"
+        style="@style/menu_button_icon"
+        android:tag="@string/scores_btn_tag"
+        android:text="@string/scores_btn_text"
+        app:icon="@drawable/medal"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
