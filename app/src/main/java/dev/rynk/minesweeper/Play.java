@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import dev.rynk.minesweeper.customactivities.BaseIOActivity;
 import dev.rynk.minesweeper.databinding.ActivityPlayBinding;
 import dev.rynk.minesweeper.utils.CursorMode;
 import dev.rynk.minesweeper.utils.GameManager;
@@ -59,7 +60,7 @@ public class Play extends BaseIOActivity {
             public void run() {
                 startActivity(activityChangeIntent);
             }
-        }, EXPLOSION_DELAY);
+        }, EXPOSE_ALL_DELAY);
 
     }
     private Bundle bundleAndSaveGameStats(int finishTime){

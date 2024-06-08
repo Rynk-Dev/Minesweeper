@@ -4,7 +4,6 @@ import static dev.rynk.minesweeper.utils.Constants.*;
 import static dev.rynk.minesweeper.utils.CursorMode.*;
 
 import android.content.Context;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
@@ -12,9 +11,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import dev.rynk.minesweeper.customviews.Tile;
 import dev.rynk.minesweeper.databinding.ActivityPlayBinding;
 public class GameManager{
-    private final Tile[][] tiles;
+    private Tile[][] tiles;
     private int cols;
     private int rows;
     private int numCells;
@@ -27,23 +28,33 @@ public class GameManager{
     public boolean isGameWon;
     private CursorMode cursorMode = FLAG;
     private int numUnknown;
-    private ActivityPlayBinding binding;
     private ImageButton gameEndButton;
     private TextView mineRemainderText;
     public GameManager(String difficulty, Context context, ActivityPlayBinding binding) {
+        setBindings(binding);
         setDifficultySettings(difficulty);
-        numCells = cols * rows;
-        isGameWon = false;
-        numUnknown = numCells;
-        firstMove = true;
-        numMinesRemaining = numMinesTotal;
+        setGameStartConditions();
+        createBoard(context);
+    }
+
+    private void setBindings(ActivityPlayBinding binding) {
         mineRemainderText = binding.mineRemainderText;
-        mineRemainderText.setText(Integer.toString(numMinesRemaining));
         gameBoard = binding.gameBoard;
         gameEndButton = binding.navEndButton;
-        tiles = new Tile[rows][cols];
+    }
+
+    private void setGameStartConditions() {
+        isGameWon = false;
+        firstMove = true;
+        numUnknown = numCells;
+        numMinesRemaining = numMinesTotal;
+        mineRemainderText.setText(Integer.toString(numMinesRemaining));
         gameBoard.setRowCount(rows);
         gameBoard.setColumnCount(cols);
+    }
+
+    private void createBoard(Context context) {
+        tiles = new Tile[rows][cols];
         gameBoard.post(new Runnable() {
             @Override
             public void run(){
@@ -55,7 +66,6 @@ public class GameManager{
     }
 
     private void setDifficultySettings(String difficulty) {
-        Log.d("ryan",difficulty);
         switch (difficulty){
             case "Easy":
                 this.cols = COLS_SMALL;
@@ -67,9 +77,8 @@ public class GameManager{
                 this.rows = ROWS_MEDIUM;
                 this.numMinesTotal = MINES_MEDIUM;
                 break;
-            default:
-                Log.d("ryan","no difficulty returned");
         }
+        numCells = cols * rows;
     }
 
     public void setCursorMode(CursorMode cursorMode){

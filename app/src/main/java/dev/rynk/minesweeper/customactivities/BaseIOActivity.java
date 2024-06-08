@@ -1,4 +1,4 @@
-package dev.rynk.minesweeper;
+package dev.rynk.minesweeper.customactivities;
 
 
 

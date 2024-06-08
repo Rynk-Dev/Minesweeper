@@ -1,21 +1,17 @@
 package dev.rynk.minesweeper;
 
 import static dev.rynk.minesweeper.utils.Constants.*;
-import static dev.rynk.minesweeper.utils.Rank.GOLD;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 
+import dev.rynk.minesweeper.customactivities.BaseIOActivity;
 import dev.rynk.minesweeper.databinding.ActivityMainBinding;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -24,7 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
 import dev.rynk.minesweeper.utils.MenuHandler;
 
 
-public class MainActivity extends BaseIOActivity{
+public class MainActivity extends BaseIOActivity {
     private ActivityMainBinding binding;
 
     @Override

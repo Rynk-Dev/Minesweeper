@@ -14,11 +14,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import dev.rynk.minesweeper.customactivities.BaseActivity;
 import dev.rynk.minesweeper.databinding.ActivityEndscreenBinding;
+import dev.rynk.minesweeper.databinding.ActivityRulesBinding;
 import dev.rynk.minesweeper.utils.MenuHandler;
 
-public class Endscreen extends AppCompatActivity {
-    private ActivityEndscreenBinding binding;
+public class Endscreen extends BaseActivity<ActivityEndscreenBinding> {
     final boolean ENABLE_ORIGINAL_BACK_PRESS = false;
     private String name;
     private int time;
@@ -35,7 +36,6 @@ public class Endscreen extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        getBindings();
         getStats();
         setScoreView();
         if (won){
@@ -48,7 +48,6 @@ public class Endscreen extends AppCompatActivity {
             setLoseView();
         }
     }
-
     private void setScoreView() {
         binding.userName.setText(name);
         binding.userTime.setText(ticksToTime(time));
@@ -68,14 +67,6 @@ public class Endscreen extends AppCompatActivity {
         won = gameResults.getBooleanExtra(WON_KEY, false);
         newPersonalBest = gameResults.getBooleanExtra(PERSONAL_BEST_KEY, false);
     }
-    private void getBindings(){
-        // view binding
-        binding = ActivityEndscreenBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-    }
-    public void menu_click(View v){
-        MenuHandler.menu_click(v, this);
-    }
     @Override
     public void onBackPressed(){
         Intent activityChangeIntent = new Intent (Endscreen.this, MainActivity.class);
@@ -84,5 +75,9 @@ public class Endscreen extends AppCompatActivity {
         if (ENABLE_ORIGINAL_BACK_PRESS){
             super.onBackPressed();
         }
+    }
+    @Override
+    protected ActivityEndscreenBinding getViewBinding() {
+        return ActivityEndscreenBinding.inflate(getLayoutInflater());
     }
 }

@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import dev.rynk.minesweeper.customactivities.BaseIOActivity;
 import dev.rynk.minesweeper.databinding.ActivityScoresBinding;
 import dev.rynk.minesweeper.utils.MenuHandler;
 import dev.rynk.minesweeper.utils.Rank;
@@ -40,17 +41,34 @@ public class Scores extends BaseIOActivity {
         getBindings();
         getCurrentUserData();
         getLeaderboard();
-        updateViews();
-        binding.debugReset.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                clearAll();
-                updateViews();
-            }
-        });
+        updateLeaderboardViews();
+        setClearButton();
+
     }
 
-    private void updateViews() {
+    /**
+     *
+     */
+    private void getBindings(){
+        // view binding
+        binding = ActivityScoresBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+    }
+    private void getCurrentUserData() {
+        currentName = getCurrentName();
+        previousTime = getTime(PERSONAL_RECENT_FILE, currentName);
+        personalBest = getTime(PERSONAL_BEST_FILE, currentName);
+    }
+    private void getLeaderboard(){
+        leaderboardNames = new String[Rank.numRanks()];
+        leaderboardTimes = new int[Rank.numRanks()];
+        for (int i = LOOP_START; i < Rank.numRanks(); i++){
+            Rank rank = Rank.rankByIndex(i);
+            leaderboardNames[i] = getName(LEADERBOARD_FILE, rank.name);
+            leaderboardTimes[i] = getTime(LEADERBOARD_FILE,rank.time);
+        }
+    }
+    private void updateLeaderboardViews() {
         binding.userName.setText(currentName);
         binding.userTime.setText(ticksToTime(previousTime));
         binding.userTopName.setText(currentName);
@@ -62,29 +80,18 @@ public class Scores extends BaseIOActivity {
         binding.bronzeUserName.setText(leaderboardNames[BRONZE.index]);
         binding.bronzeUserTime.setText(ticksToTime(leaderboardTimes[BRONZE.index]));
     }
-
-    private void getCurrentUserData() {
-        currentName = getCurrentName();
-        previousTime = getTime(PERSONAL_RECENT_FILE, currentName);
-        personalBest = getTime(PERSONAL_BEST_FILE, currentName);
-    }
-
-    private void getBindings(){
-        // view binding
-        binding = ActivityScoresBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+    private void setClearButton() {
+        binding.debugReset.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                clearAll();
+                updateLeaderboardViews();
+            }
+        });
     }
     public void menu_click(View v){
         MenuHandler.menu_click(v, this);
     }
-    private void getLeaderboard(){
-        leaderboardNames = new String[Rank.numRanks()];
-        leaderboardTimes = new int[Rank.numRanks()];
-        for (int i = LOOP_START; i < Rank.numRanks(); i++){
-            Rank rank = Rank.rankByIndex(i);
-            leaderboardNames[i] = getName(LEADERBOARD_FILE, rank.name);
-            leaderboardTimes[i] = getTime(LEADERBOARD_FILE,rank.time);
-        }
-    }
+
 
 }

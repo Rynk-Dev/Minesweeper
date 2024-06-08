@@ -1,4 +1,4 @@
-package dev.rynk.minesweeper.utils;
+package dev.rynk.minesweeper.customviews;
 
 
 
@@ -11,6 +11,9 @@ import android.content.res.Resources;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import dev.rynk.minesweeper.utils.CursorMode;
+import dev.rynk.minesweeper.utils.State;
 
 @SuppressLint("AppCompatCustomView")
 public class Tile extends ImageButton {
