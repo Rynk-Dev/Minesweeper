@@ -1,44 +1,30 @@
 package dev.rynk.minesweeper;
 
 import static dev.rynk.minesweeper.utils.Constants.*;
-import static dev.rynk.minesweeper.utils.Constants.LOOP_START;
 import static dev.rynk.minesweeper.utils.MathUtils.ticksToTime;
 import static dev.rynk.minesweeper.utils.Rank.*;
 
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.activity.EdgeToEdge;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import dev.rynk.minesweeper.customactivities.BaseIOActivity;
 import dev.rynk.minesweeper.databinding.ActivityScoresBinding;
-import dev.rynk.minesweeper.utils.MenuHandler;
 import dev.rynk.minesweeper.utils.Rank;
 
-public class Scores extends BaseIOActivity {
+public class Scores extends BaseIOActivity<ActivityScoresBinding> {
 
     private int personalBest;
     private int[] leaderboardTimes;
     private String[] leaderboardNames;
     private String currentName;
     private int previousTime;
-    private ActivityScoresBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_scores);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
         initPreferences(this);
-        getBindings();
         getCurrentUserData();
         getLeaderboard();
         updateLeaderboardViews();
@@ -46,14 +32,11 @@ public class Scores extends BaseIOActivity {
 
     }
 
-    /**
-     *
-     */
-    private void getBindings(){
-        // view binding
-        binding = ActivityScoresBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+    @Override
+    protected ActivityScoresBinding getViewBinding() {
+        return ActivityScoresBinding.inflate(getLayoutInflater());
     }
+
     private void getCurrentUserData() {
         currentName = getCurrentName();
         previousTime = getTime(PERSONAL_RECENT_FILE, currentName);
@@ -88,9 +71,6 @@ public class Scores extends BaseIOActivity {
                 updateLeaderboardViews();
             }
         });
-    }
-    public void menu_click(View v){
-        MenuHandler.menu_click(v, this);
     }
 
 

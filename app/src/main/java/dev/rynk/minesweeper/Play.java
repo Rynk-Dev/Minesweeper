@@ -9,42 +9,35 @@ import android.view.View;
 import android.widget.RadioGroup;
 
 import androidx.activity.EdgeToEdge;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import dev.rynk.minesweeper.customactivities.BaseIOActivity;
 import dev.rynk.minesweeper.databinding.ActivityPlayBinding;
 import dev.rynk.minesweeper.utils.CursorMode;
 import dev.rynk.minesweeper.utils.GameManager;
-import dev.rynk.minesweeper.utils.MenuHandler;
 import dev.rynk.minesweeper.utils.TimerThread;
 
-public class Play extends BaseIOActivity {
+public class Play extends BaseIOActivity<ActivityPlayBinding> {
     private TimerThread timer;
     int finishTime;
-    private ActivityPlayBinding binding;
     private GameManager gm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_play);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
         initPreferences(this);
-        getBindings();
         String difficulty = getDifficulty();
         gm = new GameManager(difficulty, this, binding);
-//        gm = new GameManager(COLS_SMALL, ROWS_SMALL, MINES_SMALL, this, binding);
         setCursorModeListener();
         timer = new TimerThread();
         timer.startTimer(this, binding.elapsedTime);
     }
+
+    @Override
+    protected ActivityPlayBinding getViewBinding() {
+        return ActivityPlayBinding.inflate(getLayoutInflater());
+    }
+
     public void endGameListener(View view) {
         gameFinishedActions();
     }
@@ -75,11 +68,6 @@ public class Play extends BaseIOActivity {
         gameStats.putBoolean(PERSONAL_BEST_KEY, isNewPersonalBest);
         return gameStats;
     }
-
-    public void menu_click(View v){
-        MenuHandler.menu_click(v, this);
-    }
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -94,11 +82,6 @@ public class Play extends BaseIOActivity {
     protected void onRestart() {
         super.onRestart();
         timer.startTimer(this, binding.elapsedTime);
-    }
-    private void getBindings(){
-        // view binding
-        binding = ActivityPlayBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
     }
     private void setCursorModeListener() {
         binding.cursorModeGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

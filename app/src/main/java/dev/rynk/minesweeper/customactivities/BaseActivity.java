@@ -3,7 +3,6 @@ package dev.rynk.minesweeper.customactivities;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewbinding.ViewBinding;
 
@@ -13,7 +12,7 @@ public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActiv
     protected T binding;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = getViewBinding();
         setContentView(binding.getRoot());

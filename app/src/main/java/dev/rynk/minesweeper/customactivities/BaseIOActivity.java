@@ -8,12 +8,14 @@ import static dev.rynk.minesweeper.utils.Rank.*;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewbinding.ViewBinding;
 
 import dev.rynk.minesweeper.utils.Rank;
 
-public abstract class BaseIOActivity extends AppCompatActivity {
+public abstract class BaseIOActivity<T extends ViewBinding> extends BaseActivity<T> {
     protected SharedPreferences[] preferences;
     protected void initPreferences(Context context){
         preferences = new SharedPreferences[NUM_FILES];
