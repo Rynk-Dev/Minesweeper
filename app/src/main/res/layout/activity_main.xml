@@ -18,11 +18,11 @@
         style="@style/banner_title"
         android:text="@string/title" />
 
-    <TextView
-        android:id="@+id/textView2"
-        style="@style/subheading.centered"
-        android:text="@string/player_name"
-        app:layout_constraintBottom_toTopOf="@+id/name_input" />
+<!--    <TextView-->
+<!--        android:id="@+id/textView2"-->
+<!--        style="@style/subheading.centered"-->
+<!--        android:text="@string/player_name"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/name_input" />-->
 
     <EditText
         android:id="@+id/name_input"
@@ -36,10 +36,18 @@
         android:inputType="text"
         android:text="@string/placeholder_name"
         android:textSize="@dimen/text_size_3"
-        app:layout_constraintBottom_toTopOf="@+id/button4">
+        app:layout_constraintBottom_toTopOf="@id/difficulty_button">
 
         <requestFocus />
     </EditText>
+
+    <ToggleButton
+        android:id="@+id/difficulty_button"
+        style="@style/menu_button"
+        android:textColor="@color/white"
+        android:textOn="@string/difficulty_medium_btn"
+        android:textOff="@string/difficulty_easy_btn"
+        app:layout_constraintBottom_toTopOf="@+id/button4" />
 
 <!--    MENU BUTTONS        -->
 

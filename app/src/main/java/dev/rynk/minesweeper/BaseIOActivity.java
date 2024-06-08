@@ -37,6 +37,14 @@ public abstract class BaseIOActivity extends AppCompatActivity {
     protected String getName(int file, String nameType){
         return preferences[file].getString(nameType, NAME_NOT_FOUND);
     }
+    protected void setDifficulty(String difficulty){
+        SharedPreferences.Editor editor = preferences[NAME_FILE].edit();
+        editor.putString(DIFFICULTY_KEY, difficulty);
+        editor.apply();
+    }
+    protected String getDifficulty(){
+        return preferences[NAME_FILE].getString(DIFFICULTY_KEY, NAME_NOT_FOUND);
+    }
     protected String getCurrentName(){
         return getName(NAME_FILE, CURRENT_USER_KEY);
     }

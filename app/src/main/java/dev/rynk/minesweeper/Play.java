@@ -47,8 +47,9 @@ public class Play extends BaseIOActivity {
         });
         initPreferences(this);
         getBindings();
-
-        gm = new GameManager(COLS_SMALL, ROWS_SMALL, MINES_SMALL, this, binding);
+        String difficulty = getDifficulty();
+        gm = new GameManager(difficulty, this, binding);
+//        gm = new GameManager(COLS_SMALL, ROWS_SMALL, MINES_SMALL, this, binding);
         setCursorModeListener();
         timer = new TimerThread();
         timer.startTimer(this, binding.elapsedTime);

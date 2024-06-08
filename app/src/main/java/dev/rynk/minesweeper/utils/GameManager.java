@@ -30,15 +30,13 @@ public class GameManager{
     private ActivityPlayBinding binding;
     private ImageButton gameEndButton;
     private TextView mineRemainderText;
-    public GameManager(int cols, int rows, int numMines, Context context, ActivityPlayBinding binding) {
-        this.cols = cols;
-        this.rows = rows;
+    public GameManager(String difficulty, Context context, ActivityPlayBinding binding) {
+        setDifficultySettings(difficulty);
         numCells = cols * rows;
         gameState = false;
         numUnknown = numCells;
         firstMove = true;
-        numMinesTotal = numMines;
-        numMinesRemaining = numMines;
+        numMinesRemaining = numMinesTotal;
         mineRemainderText = binding.mineRemainderText;
         mineRemainderText.setText(Integer.toString(numMinesRemaining));
         gameBoard = binding.gameBoard;
@@ -55,6 +53,25 @@ public class GameManager{
             }
         });
     }
+
+    private void setDifficultySettings(String difficulty) {
+        Log.d("ryan",difficulty);
+        switch (difficulty){
+            case "Easy":
+                this.cols = COLS_SMALL;
+                this.rows = ROWS_SMALL;
+                this.numMinesTotal = MINES_SMALL;
+                break;
+            case "Medium":
+                this.cols = COLS_MEDIUM;
+                this.rows = ROWS_MEDIUM;
+                this.numMinesTotal = MINES_MEDIUM;
+                break;
+            default:
+                Log.d("ryan","no difficulty returned");
+        }
+    }
+
     public void setCursorMode(CursorMode cursorMode){
         this.cursorMode = cursorMode;
     }
@@ -88,8 +105,8 @@ public class GameManager{
         ArrayList <Tile> neighborhood = getNeighbors(firstClicked);
         neighborhood.add(firstClicked);
         while (numMinesMade < numMinesTotal){
-            int targetRow = (int) (Math.random() * 10 % rows);
-            int targetCol = (int) (Math.random() * 10 % cols);
+            int targetRow = (int) (Math.random() * rows);
+            int targetCol = (int) (Math.random() * cols);
             Tile targetTile = tiles[targetRow][targetCol];
             if (!targetTile.getHasMine() && !neighborhood.contains(targetTile)){
                 targetTile.setMine();

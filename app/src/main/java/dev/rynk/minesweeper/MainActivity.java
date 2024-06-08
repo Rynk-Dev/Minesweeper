@@ -39,6 +39,7 @@ public class MainActivity extends BaseIOActivity{
         initPreferences(this);
         getBindings();
         setNameStates();
+        setDifficultySelectionListener();
     }
     public void menu_click(View v){
         MenuHandler.menu_click(v, this);
@@ -60,5 +61,22 @@ public class MainActivity extends BaseIOActivity{
                 return false;
             }
         });
+    }
+    private void setDifficultySelectionListener(){
+        binding.difficultyButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                saveDifficulty();
+            }
+        });
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        saveDifficulty();
+    }
+    private void saveDifficulty(){
+        String selectedDifficulty = binding.difficultyButton.getText().toString();
+        setDifficulty(selectedDifficulty);
     }
 }

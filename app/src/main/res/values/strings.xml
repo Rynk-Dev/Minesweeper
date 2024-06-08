@@ -40,5 +40,7 @@
     <string name="placeholder_time">15:33.2</string>
     <string name="reset">reset</string>
     <string name="placeholder_mines_count">10</string>
+    <string name="difficulty_easy_btn">Easy</string>
+    <string name="difficulty_medium_btn">Medium</string>
 
 </resources>

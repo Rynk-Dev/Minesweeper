@@ -23,12 +23,16 @@ public class Constants {
     public static final int LEADERBOARD_FILE = 3;
     public static final int NUM_FILES = 4;
     public static final String[] FILE_NAMES = {"current name", "personal_best", "personal_recent", "leaderboard"};
+    public static final String DIFFICULTY_KEY = "difficulty";
 
     public static final int START_TIME = 0;
 
-    public static final int ROWS_SMALL = 10;
-    public static final int COLS_SMALL = 10;
+    public static final int ROWS_SMALL = 9;
+    public static final int COLS_SMALL = 9;
     public static final int MINES_SMALL = 10;
+    public static final int ROWS_MEDIUM = 18;
+    public static final int COLS_MEDIUM = 9;
+    public static final int MINES_MEDIUM = 25;
     public static final int COORDINATE_ERROR = -1;
 
     public static final boolean HAS_MINE = true;
