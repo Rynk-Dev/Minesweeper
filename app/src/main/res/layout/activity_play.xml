@@ -3,28 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    tools:context=".Play"
+    tools:context=".activities.Play"
     style="@style/bg"
     tools:ignore="MissingConstraints, ContentDescription"
     >
 <!--        NAVBAR      -->
     <ImageButton
-        android:id="@+id/nav_end_button"
+        android:id="@+id/close_button"
         style="@style/nav_button.start"
-        android:background="@drawable/close"
-        android:onClick="endGameListener"
-        android:tag="@string/end_btn_tag" />
+        android:background="@drawable/close" />
     <ImageButton
-        android:id="@+id/nav_hint_button"
+        android:id="@+id/rules_button"
         style="@style/nav_button.end"
-        android:background="@drawable/help"
-        android:tag="@string/rules_btn_tag" />
+        android:background="@drawable/help" />
 <!--        GAME BOARD AREA       -->
     <GridLayout
         android:id="@+id/game_board"
         style="@style/span"
         app:layout_constraintBottom_toTopOf="@+id/remaining_mines_box"
-        app:layout_constraintTop_toBottomOf="@+id/nav_end_button">
+        app:layout_constraintTop_toBottomOf="@+id/close_button">
 
     </GridLayout>
 <!--        SCORES AND CONTROLS         -->
@@ -79,12 +76,12 @@
             style="@style/cursor_selector"
             android:background="@drawable/flag_mode_selector"
             android:checked="true"
-            android:tag="@string/flag_cursor_value" />
+             />
 
         <RadioButton
-            android:id="@+id/mine_cursor"
+            android:id="@+id/dig_cursor"
             style="@style/cursor_selector"
             android:background="@drawable/mine_mode_selector"
-            android:tag="@string/mine_cursor_value" />
+             />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

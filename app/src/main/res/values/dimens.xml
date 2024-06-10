@@ -36,5 +36,6 @@
     <dimen name="stat_box_left_padding">5dp</dimen>
     <dimen name="stat_row_top_margin">15dp</dimen>
     <dimen name="stat_box_margin">10dp</dimen>
+    <dimen name="rules_text_padding">20dp</dimen>
 
 </resources>

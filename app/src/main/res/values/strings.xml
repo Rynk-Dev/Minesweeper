@@ -1,7 +1,88 @@
 <resources>
 
-    <string name="rules_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum sollicitudin urna a ultrices. Aliquam ornare leo ut neque rutrum, eget vestibulum diam hendrerit. Morbi non dui condimentum, vulputate quam at, bibendum dolor. Quisque nibh velit, aliquam sit amet placerat quis, fermentum at nulla. Praesent nec egestas est. Donec volutpat risus sed accumsan imperdiet. Suspendisse ultrices efficitur fringilla.\n\nProin sit amet mauris ex. Donec suscipit fringilla nibh quis iaculis. Vivamus sit amet efficitur sem, a sodales mi. Donec imperdiet aliquam lectus, at venenatis elit. Vivamus scelerisque rutrum nulla. Nulla tempor bibendum ex et sodales. Sed pretium urna ac velit dictum ornare. Aenean tristique erat nec tellus fermentum dictum. Aliquam consequat lorem egestas, suscipit ante mattis, ultricies metus. Cras maximus commodo lectus, sit amet vehicula felis lobortis nec. Etiam lacinia quis enim a malesuada. Nam luctus pretium risus vel volutpat. Vivamus in est in nunc gravida suscipit. Nulla in finibus orci, aliquet tincidunt quam. Suspendisse at justo dictum, sodales nisl semper, imperdiet lacus. Nullam commodo, ipsum ut convallis aliquet, lectus dui euismod augue, scelerisque ultrices dui nunc vitae dolor.\n\nDuis laoreet tellus quis neque tempus pellentesque. Sed at ultrices urna, ullamcorper tempor erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis aliquet fermentum risus, in sollicitudin lectus elementum sit amet. Aliquam erat volutpat. Aenean ac ante in leo cursus rhoncus. Praesent euismod massa a porttitor elementum. Donec nec egestas arcu, facilisis fringilla velit. Integer massa risus, vestibulum at urna non, aliquam tempor enim. Mauris suscipit aliquam ex at pellentesque. Curabitur elementum eros sit amet tortor vehicula euismod. Vestibulum quam purus, eleifend sit amet magna eu, porta pellentesque diam. Integer sodales ipsum lacus, quis suscipit est aliquam vitae. Etiam nunc mauris, condimentum id mollis ac, varius sit amet magna. Quisque non volutpat libero. Quisque condimentum augue eu porttitor hendrerit.\n\nProin sollicitudin pellentesque faucibus. Quisque sit amet sagittis lorem, eget luctus erat. Nullam finibus dui sit amet mi laoreet, ac hendrerit metus pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam quis tincidunt ex, eu viverra libero. Nulla aliquet, sapien vel molestie iaculis, urna nisi interdum lorem, ac blandit mi mi vel metus. Vestibulum ut odio aliquam, placerat mi et, tristique metus. Nam ac feugiat ante. Ut lobortis arcu massa, sit amet tincidunt justo luctus nec. Nullam faucibus rutrum purus, eget posuere massa efficitur et. Aenean hendrerit quam sapien, nec suscipit orci ultricies a. Ut eu eros vel nisl efficitur mollis sit amet et nulla. Praesent sed eros bibendum, bibendum lectus id, malesuada massa. Nunc pellentesque lacus a sapien convallis, eget fringilla libero pellentesque.\n\nInteger dapibus mollis justo vitae lobortis. Maecenas rhoncus ac risus eu consequat. Phasellus non velit quis mauris pretium gravida. Nam tristique lectus tellus, nec ornare quam tempus vitae. Vivamus dapibus et leo ac vestibulum. Nunc vestibulum turpis quis ligula efficitur rhoncus. Nunc hendrerit sapien felis, vel auctor nisl rhoncus vitae.\n\nCras blandit euismod faucibus. Vestibulum iaculis nisi ac orci porta, eu pellentesque dolor consequat. Phasellus eget ligula vestibulum, gravida mauris vel, commodo sem. Pellentesque euismod vulputate mi, eget finibus urna posuere consequat. Proin nulla odio, dictum at rutrum vel, rutrum id augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in tempor lorem, eu finibus diam. Nullam sit amet lacus bibendum, sagittis mi id, elementum tortor. Cras molestie neque sed neque egestas ultrices. Duis vel mi iaculis, porttitor eros in, finibus augue. Aliquam ultricies lacus nec erat mollis rutrum.</string>
+    <string name="rules_text">Welcome to Minesweeper!\n
+    When you play, you are met with a grid. Some of these have a mine hidden underneath!\n
+        At the bottom left, you have your timer, which tracks how long you take, and a mines remaining
+        window, which shows how many untracked mines remain.\n
+        All tiles start in the UNKNOWN state. A tile may have 1 or 0 mines underneath it.\n\n
+    Your first click will expose your first tile, which is guaranteed to be SAFE. Try it now!\n
+        None of its neighbors will have mines.\n
+        Because it has no mines in its 3x3 neighborhood, it will reveal all tiles around it.\n
+        ---------------------\n
+        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n
+        ---------------------\n
+        |\ \ \ \ |\ 0\ |\ 0\ |\ 0\ |\ \ \ \ |\n
+        ---------------------\n
+        |\ \ \ \ |\ 0\ |\ X\ |\ 0\ |\ \ \ \ |\n
+        ---------------------\n
+        |\ \ \ \ |\ 0\ |\ 0\ |\ 0\ |\ \ \ \ |\n
+        ---------------------\n
+        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n
+        ---------------------\n
+        e.g., All tiles marked \"0\" are in the neighborhood of tile "X"\n\n
+        If your tile is connected to other tiles with no adjacent mines, it will chain and reveal
+        the tiles around those tiles!\n\n
 
+        Some SAFE tiles have number on them. These numbers show how many mines are in its neighborhood.\n
+
+        At the bottom right, you have a cursor selector. Its default is the FLAG cursor.\n
+        With the flag cursor, you can mark tiles you think are suspicious. This will reduce the
+        untracked mine counter.\n
+        Do you see a tile that has a \"1\" and only 1 UNKNOWN tile in its neighborhood?\n\n
+
+        -------------\n
+        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n
+        -------------\n
+        |\ \ \ \ |\ \ \ \ |\ 1\ |\n
+        -------------\n
+        |\ \ \ \ |\ 2\ |\ 1\ |\n
+        -------------\n
+        e.g., The bottom right tile only has 1 UNKNOWN tile in its neighborhood - the middle tile, and expects 1 mine in its neighborhood.\n\n
+
+        If you see this, it means that the UNKNOWN tile definitely has a mine under it.\n
+        With the FLAG cursor selected, tag the UNKNOWN tile as FLAGGED.\n
+        If a nearby tile also has a "1", and one of its UNKNOWN tiles is flagged, that means that
+        all the other UNKNOWN tiles in its neighborhood are now safe!\n\n
+
+        -------------\n
+        |\ \ \ \ |\ S\ |\ S\ |\n
+        -------------\n
+        |\ \ \ \ |\ F\ |\ 1\ |\n
+        -------------\n
+        |\ \ \ \ |\ 2\ |\ 1\ |\n
+        -------------\n
+        e.g., the middle right tile expects 1 mine in its neighborhood, and that's confirmed to be
+        in the middle tile due to the bottom right tile. Therefore, the top middle and top right tiles are safe!\n\n
+
+        With the DIG cursor, you can directly expose an UNKNOWN tile you think is safe. If you dig a tile with a mine, it
+        will explode, and you will lose!\n
+        If you have a UNKNOWN tile you think is safe, try clicking on it with the DIG cursor!\n\n
+
+
+        -------------\n
+        |\ \ \ \ |\ S\ |\ 1\ |\n
+        -------------\n
+        |\ \ \ \ |\ F\ |\ 1\ |\n
+        -------------\n
+        |\ \ \ \ |\ 2\ |\ 1\ |\n
+        -------------\n
+        I clicked on the top right and exposed the safe tile. But you don't have to click on each tile
+        individually. Whether you're in FLAG or DIG mode, you can click on a tile that is already SAFE.\n
+        If that tile's number of expected neighbor mines matches the number of flags in its neighborhood,
+        it will DIG all the unflagged tiles in its neighborhood. What a deal!\n\n
+        -------------\n
+        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n
+        -------------\n
+        |\ \ \ \ |\ 1\ |\ \ \ \ |\n
+        -------------\n
+        |\ F\ |\ \ \ \ |\ \ \ \ |\n
+        -------------\n
+        e.g., if I click on the middle tile, because it is expecting 1 mine and has 1 flag, DIG will
+        occur on every tile in its neighborhood other than the flagged tile and the safe tile.\n\n
+
+        Be careful though! If you flag erroneously, and the mine isn't under the tile you flagged,
+        it will blow up and you will lose the game!
+    </string>
     <!--    TITLE TEXT        -->
     <string name="app_name">Minesweeper</string>
     <string name="title">Minesweeper</string>
@@ -12,25 +93,13 @@
 
     <string name="play_again_btn_text">Play Again</string>
 
-    <!--    MENU BUTTON TAG VALUES  -->
-    <string name="main_btn_tag">main</string>
-    <string name="scores_btn_tag">scores</string>
-    <string name="play_btn_tag">play</string>
-    <string name="close_btn_tag">close</string>
-    <string name="rules_btn_tag">rules</string>
-    <string name="end_btn_tag">end</string>
-    <string name="menu_button_handler_name">menu_click</string>
-
     <!--    ENDSCREEN STRINGS   -->
     <string name="win_message">Winner!</string>
     <string name="lose_message">Good Try!</string>
 
     <!--    GAMEPLAY STRINGS        -->
-    <string name="mine_cursor_value">DIG</string>
-    <string name="flag_cursor_value">FLAG</string>
-
-    <string name="difficulty_easy_btn_text">Easy</string>
-    <string name="difficulty_medium_btn_text">Medium</string>
+    <string name="difficulty_easy_btn_text">EASY</string>
+    <string name="difficulty_medium_btn_text">MEDIUM</string>
 
     <!--    SCORE STRINGS   -->
     <string name="reset_btn_text">reset</string>

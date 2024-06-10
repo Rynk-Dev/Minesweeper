@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     style="@style/bg"
-    tools:context=".MainActivity"
+    tools:context=".activities.MainActivity"
     tools:ignore="MissingConstraints, ContentDescription">
 
     <ImageView
@@ -36,10 +36,7 @@
         android:inputType="text"
         android:text="@string/placeholder_name"
         android:textSize="@dimen/text_size_3"
-        app:layout_constraintBottom_toTopOf="@id/difficulty_button">
-
-        <requestFocus />
-    </EditText>
+        app:layout_constraintBottom_toTopOf="@id/difficulty_button"/>
 
     <ToggleButton
         android:id="@+id/difficulty_button"
@@ -47,30 +44,27 @@
         android:textColor="@color/white"
         android:textOn="@string/difficulty_medium_btn_text"
         android:textOff="@string/difficulty_easy_btn_text"
-        app:layout_constraintBottom_toTopOf="@+id/button4" />
+        app:layout_constraintBottom_toTopOf="@+id/play_button" />
 
 <!--    MENU BUTTONS        -->
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/play_button"
         style="@style/menu_button_icon"
-        android:tag="@string/play_btn_tag"
         android:text="@string/play_title"
         app:icon="@drawable/play"
-        app:layout_constraintBottom_toTopOf="@+id/button6" />
+        app:layout_constraintBottom_toTopOf="@+id/rules_button" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/rules_button"
         style="@style/menu_button_icon"
-        android:tag="@string/rules_btn_tag"
         android:text="@string/rules_title"
         app:icon="@drawable/help"
-        app:layout_constraintBottom_toTopOf="@id/button5" />
+        app:layout_constraintBottom_toTopOf="@id/scores_button" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/scores_button"
         style="@style/menu_button_icon"
-        android:tag="@string/scores_btn_tag"
         android:text="@string/scores_title"
         app:icon="@drawable/medal"
         app:layout_constraintBottom_toBottomOf="parent" />

@@ -1,24 +1,26 @@
-package dev.rynk.minesweeper;
+package dev.rynk.minesweeper.activities;
 
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import dev.rynk.minesweeper.customactivities.BaseActivity;
 import dev.rynk.minesweeper.databinding.ActivityRulesBinding;
-import dev.rynk.minesweeper.utils.MenuHandler;
 
 public class Rules extends BaseActivity<ActivityRulesBinding> {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        binding.closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
+    /**
+     * implements interface to pass activity binding to parent
+     * @return binding for the rules activity
+     */
     @Override
     protected ActivityRulesBinding getViewBinding() {
         return ActivityRulesBinding.inflate(getLayoutInflater());

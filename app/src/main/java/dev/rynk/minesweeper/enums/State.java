@@ -1,5 +1,8 @@
-package dev.rynk.minesweeper.utils;
+package dev.rynk.minesweeper.enums;
 
+/**
+ * Represents tile states.
+ */
 public enum State{
     UNKNOWN ("unknown"),
     FLAGGED("flag"),

@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     style="@style/bg"
-    tools:context=".Rules"
+    tools:context=".activities.Scores"
     tools:ignore="MissingConstraints, ContentDescription"
     >
 
     <ImageButton
-        android:id="@+id/home_button"
+        android:id="@+id/main_button"
         style="@style/nav_button.start"
         android:background="@drawable/home"
-        android:tag="@string/main_btn_tag"
-        app:layout_constraintBottom_toTopOf="@id/score_label"
-        />
+        app:layout_constraintBottom_toTopOf="@id/score_label" />
 
     <TextView
         android:id="@+id/scores_title_view"
@@ -24,15 +22,14 @@
     <ImageButton
         android:id="@+id/play_button"
         style="@style/nav_button.end"
-        android:background="@drawable/play"
-        android:tag="@string/play_btn_tag" />
+        android:background="@drawable/play" />
 
     <!--    LAST WINNING SCORE       -->
     <TextView
         android:id="@+id/score_label"
         style="@style/score_label"
         android:text="@string/last_score_label"
-        app:layout_constraintTop_toBottomOf="@+id/home_button"
+        app:layout_constraintTop_toBottomOf="@+id/main_button"
         app:layout_constraintBottom_toTopOf="@id/user_name"/>
 
     <TextView
