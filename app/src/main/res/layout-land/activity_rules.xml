@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".activities.Rules"
+    style="@style/bg.land"
+    tools:ignore="ContentDescription">
+<!--    NAVBAR      -->
+    <LinearLayout
+        style="@style/navbar.land">
+    <ImageButton
+        android:id="@+id/close_button"
+        style="@style/nav_button"
+        android:background="@drawable/close"
+        android:layout_weight="0"/>
+<Space
+    style="@style/pusher_padding" />
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/nav_title"
+        android:text="@string/rules_title"
+        android:layout_weight="0"/>
+        <Space
+            style="@style/pusher_padding" />
+    <Space
+        style="@style/nav_button_empty"/>
+    </LinearLayout>
+<!--    RULES       -->
+    <ScrollView
+        android:id="@+id/rules_scrollview"
+        style="@style/span"
+        android:layout_marginBottom="@dimen/rules_bottom_margin_land"
+        android:scrollbars="vertical">
+
+        <TextView
+            style="@style/span"
+            android:padding="@dimen/rules_text_padding"
+            android:text="@string/rules_text" />
+    </ScrollView>
+</LinearLayout>

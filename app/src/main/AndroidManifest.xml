@@ -21,7 +21,8 @@
             android:exported="false" />
         <activity
             android:name=".activities.Play"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Rules"
             android:exported="false" />

@@ -38,5 +38,11 @@
     <dimen name="stat_row_top_margin">15dp</dimen>
     <dimen name="stat_box_margin">10dp</dimen>
     <dimen name="rules_text_padding">20dp</dimen>
+    <dimen name="land_padding">20dp</dimen>
+    <dimen name="score_box_padding_land_x">50dp</dimen>
+    <dimen name="nav_bottom_margin_land">20dp</dimen>
+    <dimen name="rules_bottom_margin_land">30dp</dimen>
+    <dimen name="stat_label_top_margin_land">15dp</dimen>
+    <dimen name="score_box_padding_x">20dp</dimen>
 
 </resources>

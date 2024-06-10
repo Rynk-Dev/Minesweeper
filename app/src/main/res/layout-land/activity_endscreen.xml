@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    style="@style/bg"
+    style="@style/bg.land.horizontal"
     tools:context=".activities.Endscreen"
     tools:ignore="ContentDescription">
+    <LinearLayout
+        style="@style/land_container">
 <!--    HERO    -->
     <ImageView
         android:id="@+id/logo"
@@ -18,8 +20,12 @@
         style="@style/title"
         android:text="@string/win_message" />
 <!--    SCORE   -->
+
+    </LinearLayout>
+<LinearLayout
+    style="@style/land_container">
     <LinearLayout
-        style="@style/score_box">
+        style="@style/score_box.land">
         <TextView
             android:id="@+id/user_name"
             style="@style/score_name" />
@@ -32,7 +38,6 @@
             android:id="@+id/user_time"
             style="@style/score_time" />
     </LinearLayout>
-
 <!--    MENU BUTTONS    -->
     <Button
         android:id="@+id/play_button"
@@ -49,4 +54,6 @@
         style="@style/menu_button_icon"
         android:text="@string/scores_title"
         app:icon="@drawable/medal" />
+
+</LinearLayout>
 </LinearLayout>

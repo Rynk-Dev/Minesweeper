@@ -3,9 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    style="@style/bg"
+    style="@style/bg.land.horizontal"
     tools:context=".activities.MainActivity"
     tools:ignore="MissingConstraints, ContentDescription">
+    <LinearLayout
+        style="@style/land_container"
+        >
 
     <ImageView
         android:id="@+id/logo"
@@ -17,6 +20,11 @@
         style="@style/title"
         android:text="@string/title" />
 
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/land_container">
     <EditText
         style="@style/wrapped.vert.1"
         android:id="@+id/name_input"
@@ -38,7 +46,6 @@
         app:layout_constraintBottom_toTopOf="@+id/play_button" />
 
 <!--    MENU BUTTONS        -->
-
     <Button
         android:id="@+id/play_button"
         style="@style/menu_button_icon"
@@ -56,5 +63,7 @@
         style="@style/menu_button_icon"
         android:text="@string/scores_title"
         app:icon="@drawable/medal" />
+
+    </LinearLayout>
 
 </LinearLayout>

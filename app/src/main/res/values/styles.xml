@@ -9,6 +9,21 @@
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="bg.land">
+        <item name="android:padding">@dimen/land_padding</item>
+    </style>
+    <style name="bg.land.horizontal">
+        <item name="android:orientation">horizontal</item>
+
+    </style>
+    <style name="land_container">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+
+    </style>
 
     <style name="wrapped">
         <item name="android:layout_width">wrap_content</item>
@@ -106,6 +121,9 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_marginBottom">@dimen/nav_bottom_margin</item>
     </style>
+    <style name="navbar.land">
+        <item name="android:layout_marginBottom">@dimen/nav_bottom_margin_land</item>
+    </style>
     <style name="nav_button">
         <item name="android:layout_width">@dimen/nav_button_size</item>
         <item name="android:layout_height">@dimen/nav_button_size</item>
@@ -127,8 +145,20 @@
         <item name="android:textSize">@dimen/text_size_3</item>
         <item name="android:layout_marginTop">@dimen/stat_label_top_margin</item>
     </style>
+    <style name="score_label.land">
+        <item name="android:textSize">@dimen/text_size_3</item>
+        <item name="android:layout_marginTop">@dimen/stat_label_top_margin_land</item>
+    </style>
     <style name="score_box" parent="span.vert.1">
         <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/score_box_padding_x</item>
+        <item name="android:paddingEnd">@dimen/score_box_padding_x</item>
+
+    </style>
+    <style name="score_box.land">
+        <item name="android:paddingStart">@dimen/score_box_padding_land_x</item>
+        <item name="android:paddingEnd">@dimen/score_box_padding_land_x</item>
         <item name="android:gravity">center_vertical</item>
     </style>
     <style name="score_name" parent="subheading">
@@ -151,7 +181,7 @@
     <!--    HERO STYLE ACTIVITY STYLES      -->
     <style name="hero" parent="span.vert.6">
         <item name="android:layout_marginBottom">@dimen/hero_bottom_margin</item>
-        <item name="android:scaleType">centerCrop</item>
+        <item name="android:scaleType">fitCenter</item>
     </style>
 
     <!--    PLAY ACTIVITY STYLES-->

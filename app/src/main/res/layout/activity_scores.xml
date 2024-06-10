@@ -5,7 +5,7 @@
     android:id="@+id/main"
     style="@style/bg"
     tools:context=".activities.Scores"
-    tools:ignore="MissingConstraints, ContentDescription"
+    tools:ignore="ContentDescription"
     >
     <LinearLayout
         style="@style/navbar">
@@ -72,85 +72,63 @@
     <TextView
         android:id="@+id/gold_score_label"
         style="@style/score_label"
-        android:text="@string/gold_label"
-        app:layout_constraintTop_toBottomOf="@+id/user_top_name" />
+        android:text="@string/gold_label" />
     <LinearLayout
         style="@style/score_box">
     <TextView
         android:id="@+id/gold_user_name"
-        style="@style/score_name"
-        app:layout_constraintTop_toBottomOf="@+id/gold_score_label" />
+        style="@style/score_name" />
     <Space
         style="@style/pusher_padding"
         />
     <ImageView
         android:id="@+id/imageView4"
-        style="@style/score_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/gold_user_name"
-        app:layout_constraintEnd_toStartOf="@+id/gold_user_time"
-        app:layout_constraintTop_toTopOf="@+id/gold_user_name" />
+        style="@style/score_icon" />
 
     <TextView
         android:id="@+id/gold_user_time"
-        style="@style/score_time"
-        app:layout_constraintBottom_toBottomOf="@+id/gold_user_name"
-        app:layout_constraintTop_toTopOf="@+id/gold_user_name" />
+        style="@style/score_time" />
     </LinearLayout>
     <!--    2ND HIGH SCORE      -->
     <TextView
         android:id="@+id/silver_score_label"
         style="@style/score_label"
-        android:text="@string/silver_label"
-        app:layout_constraintTop_toBottomOf="@+id/gold_user_name" />
+        android:text="@string/silver_label" />
         <LinearLayout
             style="@style/score_box">
     <TextView
         android:id="@+id/silver_user_name"
-        style="@style/score_name"
-        app:layout_constraintTop_toBottomOf="@+id/silver_score_label" />
+        style="@style/score_name" />
     <Space
         style="@style/pusher_padding"
         />
     <ImageView
         android:id="@+id/imageView3"
-        style="@style/score_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/silver_user_name"
-        app:layout_constraintEnd_toStartOf="@+id/silver_user_time"
-        app:layout_constraintTop_toTopOf="@+id/silver_user_name" />
+        style="@style/score_icon" />
 
     <TextView
         android:id="@+id/silver_user_time"
-        style="@style/score_time"
-        app:layout_constraintBottom_toBottomOf="@+id/silver_user_name"
-        app:layout_constraintTop_toTopOf="@+id/silver_user_name" />
+        style="@style/score_time" />
         </LinearLayout>
     <!--    3RD HIGH SCORE      -->
     <TextView
         android:id="@+id/bronze_score_label"
         style="@style/score_label"
-        android:text="@string/bronze_label"
-        app:layout_constraintTop_toBottomOf="@+id/silver_user_name" />
+        android:text="@string/bronze_label" />
             <LinearLayout
                 style="@style/score_box">
     <TextView
         android:id="@+id/bronze_user_name"
-        style="@style/score_name"
-        app:layout_constraintTop_toBottomOf="@+id/bronze_score_label" />
+        style="@style/score_name" />
     <Space
         style="@style/pusher_padding"
         />
     <ImageView
-        style="@style/score_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/bronze_user_name"
-        app:layout_constraintEnd_toStartOf="@+id/bronze_user_time"
-        app:layout_constraintTop_toTopOf="@+id/bronze_user_name" />
+        style="@style/score_icon" />
 
     <TextView
         android:id="@+id/bronze_user_time"
-        style="@style/score_time"
-        app:layout_constraintBottom_toBottomOf="@+id/bronze_user_name"
-        app:layout_constraintTop_toTopOf="@+id/bronze_user_name"
-         />
+        style="@style/score_time" />
             </LinearLayout>
     <!--    RESET BUTTON        -->
     <Space
@@ -159,6 +137,5 @@
     <Button
         android:id="@+id/debug_reset"
         style="@style/menu_button"
-        android:text="@string/reset_btn_text"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:text="@string/reset_btn_text" />
 </LinearLayout>

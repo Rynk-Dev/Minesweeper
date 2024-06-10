@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/bg.land"
+    tools:context=".activities.Scores"
+    tools:ignore="ContentDescription"
+    >
+    <LinearLayout
+        style="@style/navbar.land">
+    <ImageButton
+        android:id="@+id/main_button"
+        style="@style/nav_button"
+        android:background="@drawable/home" />
+    <Space
+        style="@style/pusher_padding"/>
+    <TextView
+        android:id="@+id/scores_title_view"
+        style="@style/nav_title"
+        android:text="@string/scores_title" />
+        <Space
+            style="@style/pusher_padding"/>
+    <ImageButton
+        android:id="@+id/play_button"
+        style="@style/nav_button"
+        android:background="@drawable/play" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            style="@style/land_container">
+            <TextView
+                android:id="@+id/gold_score_label"
+                style="@style/score_label.land"
+                android:text="@string/gold_label" />
+            <LinearLayout
+                style="@style/score_box">
+                <TextView
+                    android:id="@+id/gold_user_name"
+                    style="@style/score_name" />
+                <Space
+                    style="@style/pusher_padding"
+                    />
+                <ImageView
+                    android:id="@+id/imageView4"
+                    style="@style/score_icon" />
+
+                <TextView
+                    android:id="@+id/gold_user_time"
+                    style="@style/score_time" />
+            </LinearLayout>
+            <!--    2ND HIGH SCORE      -->
+            <TextView
+                android:id="@+id/silver_score_label"
+                style="@style/score_label.land"
+                android:text="@string/silver_label" />
+            <LinearLayout
+                style="@style/score_box">
+                <TextView
+                    android:id="@+id/silver_user_name"
+                    style="@style/score_name" />
+                <Space
+                    style="@style/pusher_padding"
+                    />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    style="@style/score_icon" />
+
+                <TextView
+                    android:id="@+id/silver_user_time"
+                    style="@style/score_time" />
+            </LinearLayout>
+            <!--    3RD HIGH SCORE      -->
+            <TextView
+                android:id="@+id/bronze_score_label"
+                style="@style/score_label.land"
+                android:text="@string/bronze_label" />
+            <LinearLayout
+                style="@style/score_box">
+                <TextView
+                    android:id="@+id/bronze_user_name"
+                    style="@style/score_name" />
+                <Space
+                    style="@style/pusher_padding"
+                    />
+                <ImageView
+                    style="@style/score_icon" />
+
+                <TextView
+                    android:id="@+id/bronze_user_time"
+                    style="@style/score_time" />
+            </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
+        style="@style/land_container">
+        <!--    LAST WINNING SCORE       -->
+    <TextView
+        android:id="@+id/score_label"
+        style="@style/score_label.land"
+        android:text="@string/last_score_label" />
+
+    <LinearLayout
+        style="@style/score_box">
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/score_name" />
+        <Space
+            style="@style/pusher_padding"
+            />
+    <ImageView
+        android:id="@+id/imageView2"
+        style="@style/score_icon" />
+
+    <TextView
+        android:id="@+id/user_time"
+        style="@style/score_time" />
+    </LinearLayout>
+    <!--    USER HIGH SCORE      -->
+    <TextView
+        android:id="@+id/user_top_label"
+        style="@style/score_label.land"
+        android:text="@string/user_top_score_label" />
+    <LinearLayout
+        style="@style/score_box">
+    <TextView
+        android:id="@+id/user_top_name"
+        style="@style/score_name" />
+        <Space
+            style="@style/pusher_padding"
+            />
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/score_icon" />
+
+    <TextView
+        android:id="@+id/user_top_time"
+        style="@style/score_time" />
+    </LinearLayout>
+    <!--    TOTAL HIGH SCORE      -->
+
+    <Button
+        android:id="@+id/debug_reset"
+        style="@style/menu_button"
+        android:text="@string/reset_btn_text"
+        android:layout_marginTop="@dimen/stat_label_top_margin_land"/>
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    RESET BUTTON        -->
+<!--    <Space-->
+<!--        style="@style/pusher_padding"-->
+<!--        />-->
+</LinearLayout>
