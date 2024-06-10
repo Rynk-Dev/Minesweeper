@@ -1,88 +1,89 @@
 <resources>
+    <string name="rules_text">test</string>
+<!--    <string name="rules_text">-->
+<!--        Welcome to Minesweeper!\n-->
+<!--    When you play, you are met with a grid. Some of these have a mine hidden underneath!\n-->
+<!--        At the bottom left, you have your timer, which tracks how long you take, and a mines remaining-->
+<!--        window, which shows how many untracked mines remain.\n-->
+<!--        All tiles start in the UNKNOWN state. A tile may have 1 or 0 mines underneath it.\n\n-->
+<!--    Your first click will expose your first tile, which is guaranteed to be SAFE. Try it now!\n-->
+<!--        None of its neighbors will have mines.\n-->
+<!--        Because it has no mines in its 3x3 neighborhood, it will reveal all tiles around it.\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ 0\ |\ 0\ |\ 0\ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ 0\ |\ X\ |\ 0\ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ 0\ |\ 0\ |\ 0\ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        e.g., All tiles marked \"0\" are in the neighborhood of tile \"X\"\n\n-->
+<!--        If your tile is connected to other tiles with no adjacent mines, it will chain and reveal-->
+<!--        the tiles around those tiles!\n\n-->
 
-    <string name="rules_text">Welcome to Minesweeper!\n
-    When you play, you are met with a grid. Some of these have a mine hidden underneath!\n
-        At the bottom left, you have your timer, which tracks how long you take, and a mines remaining
-        window, which shows how many untracked mines remain.\n
-        All tiles start in the UNKNOWN state. A tile may have 1 or 0 mines underneath it.\n\n
-    Your first click will expose your first tile, which is guaranteed to be SAFE. Try it now!\n
-        None of its neighbors will have mines.\n
-        Because it has no mines in its 3x3 neighborhood, it will reveal all tiles around it.\n
-        ---------------------\n
-        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n
-        ---------------------\n
-        |\ \ \ \ |\ 0\ |\ 0\ |\ 0\ |\ \ \ \ |\n
-        ---------------------\n
-        |\ \ \ \ |\ 0\ |\ X\ |\ 0\ |\ \ \ \ |\n
-        ---------------------\n
-        |\ \ \ \ |\ 0\ |\ 0\ |\ 0\ |\ \ \ \ |\n
-        ---------------------\n
-        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n
-        ---------------------\n
-        e.g., All tiles marked \"0\" are in the neighborhood of tile "X"\n\n
-        If your tile is connected to other tiles with no adjacent mines, it will chain and reveal
-        the tiles around those tiles!\n\n
+<!--        Some SAFE tiles have number on them. These numbers show how many mines are in its neighborhood.\n-->
 
-        Some SAFE tiles have number on them. These numbers show how many mines are in its neighborhood.\n
+<!--        At the bottom right, you have a cursor selector. Its default is the FLAG cursor.\n-->
+<!--        With the flag cursor, you can mark tiles you think are suspicious. This will reduce the-->
+<!--        untracked mine counter.\n-->
+<!--        Do you see a tile that has a \"1\" and only 1 UNKNOWN tile in its neighborhood?\n\n-->
 
-        At the bottom right, you have a cursor selector. Its default is the FLAG cursor.\n
-        With the flag cursor, you can mark tiles you think are suspicious. This will reduce the
-        untracked mine counter.\n
-        Do you see a tile that has a \"1\" and only 1 UNKNOWN tile in its neighborhood?\n\n
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ \ \ \ |\ 1\ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ 2\ |\ 1\ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        e.g., The bottom right tile only has 1 UNKNOWN tile in its neighborhood - the middle tile, and expects 1 mine in its neighborhood.\n\n-->
 
-        -------------\n
-        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n
-        -------------\n
-        |\ \ \ \ |\ \ \ \ |\ 1\ |\n
-        -------------\n
-        |\ \ \ \ |\ 2\ |\ 1\ |\n
-        -------------\n
-        e.g., The bottom right tile only has 1 UNKNOWN tile in its neighborhood - the middle tile, and expects 1 mine in its neighborhood.\n\n
+<!--        If you see this, it means that the UNKNOWN tile definitely has a mine under it.\n-->
+<!--        With the FLAG cursor selected, tag the UNKNOWN tile as FLAGGED.\n-->
+<!--        If a nearby tile also has a \"1\", and one of its UNKNOWN tiles is flagged, that means that-->
+<!--        all the other UNKNOWN tiles in its neighborhood are now safe!\n\n-->
 
-        If you see this, it means that the UNKNOWN tile definitely has a mine under it.\n
-        With the FLAG cursor selected, tag the UNKNOWN tile as FLAGGED.\n
-        If a nearby tile also has a "1", and one of its UNKNOWN tiles is flagged, that means that
-        all the other UNKNOWN tiles in its neighborhood are now safe!\n\n
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ S\ |\ S\ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ F\ |\ 1\ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ 2\ |\ 1\ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        e.g., the middle right tile expects 1 mine in its neighborhood, and that's confirmed to be-->
+<!--        in the middle tile due to the bottom right tile. Therefore, the top middle and top right tiles are safe!\n\n-->
 
-        -------------\n
-        |\ \ \ \ |\ S\ |\ S\ |\n
-        -------------\n
-        |\ \ \ \ |\ F\ |\ 1\ |\n
-        -------------\n
-        |\ \ \ \ |\ 2\ |\ 1\ |\n
-        -------------\n
-        e.g., the middle right tile expects 1 mine in its neighborhood, and that's confirmed to be
-        in the middle tile due to the bottom right tile. Therefore, the top middle and top right tiles are safe!\n\n
-
-        With the DIG cursor, you can directly expose an UNKNOWN tile you think is safe. If you dig a tile with a mine, it
-        will explode, and you will lose!\n
-        If you have a UNKNOWN tile you think is safe, try clicking on it with the DIG cursor!\n\n
+<!--        With the DIG cursor, you can directly expose an UNKNOWN tile you think is safe. If you dig a tile with a mine, it-->
+<!--        will explode, and you will lose!\n-->
+<!--        If you have a UNKNOWN tile you think is safe, try clicking on it with the DIG cursor!\n\n-->
 
 
-        -------------\n
-        |\ \ \ \ |\ S\ |\ 1\ |\n
-        -------------\n
-        |\ \ \ \ |\ F\ |\ 1\ |\n
-        -------------\n
-        |\ \ \ \ |\ 2\ |\ 1\ |\n
-        -------------\n
-        I clicked on the top right and exposed the safe tile. But you don't have to click on each tile
-        individually. Whether you're in FLAG or DIG mode, you can click on a tile that is already SAFE.\n
-        If that tile's number of expected neighbor mines matches the number of flags in its neighborhood,
-        it will DIG all the unflagged tiles in its neighborhood. What a deal!\n\n
-        -------------\n
-        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n
-        -------------\n
-        |\ \ \ \ |\ 1\ |\ \ \ \ |\n
-        -------------\n
-        |\ F\ |\ \ \ \ |\ \ \ \ |\n
-        -------------\n
-        e.g., if I click on the middle tile, because it is expecting 1 mine and has 1 flag, DIG will
-        occur on every tile in its neighborhood other than the flagged tile and the safe tile.\n\n
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ S\ |\ 1\ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ F\ |\ 1\ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ 2\ |\ 1\ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        I clicked on the top right and exposed the safe tile. But you don't have to click on each tile-->
+<!--        individually. Whether you're in FLAG or DIG mode, you can click on a tile that is already SAFE.\n-->
+<!--        If that tile's number of expected neighbor mines matches the number of flags in its neighborhood,-->
+<!--        it will DIG all the unflagged tiles in its neighborhood. What a deal!\n\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ \ \ \ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ \ \ \ |\ 1\ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        |\ F\ |\ \ \ \ |\ \ \ \ |\n-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;\n-->
+<!--        e.g., if I click on the middle tile, because it is expecting 1 mine and has 1 flag, DIG will-->
+<!--        occur on every tile in its neighborhood other than the flagged tile and the safe tile.\n\n-->
 
-        Be careful though! If you flag erroneously, and the mine isn't under the tile you flagged,
-        it will blow up and you will lose the game!
-    </string>
+<!--        Be careful though! If you flag erroneously, and the mine isn't under the tile you flagged,-->
+<!--        it will blow up and you will lose the game!-->
+<!--    </string>-->
     <!--    TITLE TEXT        -->
     <string name="app_name">Minesweeper</string>
     <string name="title">Minesweeper</string>

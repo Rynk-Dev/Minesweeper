@@ -28,7 +28,8 @@
     <dimen name="menu_horizontal_padding">40dp</dimen>
     <dimen name="menu_button_margin">15dp</dimen>
 
-    <dimen name="hero_bottom_margin">50dp</dimen>
+    <dimen name="hero_bottom_margin">20dp</dimen>
+    <dimen name="title_bottom_margin">20dp</dimen>
 
     <dimen name="rules_bottom_margin">70dp</dimen>
 

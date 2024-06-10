@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     tools:context=".activities.Rules"
     style="@style/bg"
-    tools:ignore="MissingConstraints, ContentDescription">
+    tools:ignore="ContentDescription">
 <!--    NAVBAR      -->
+    <LinearLayout
+        style="@style/navbar">
     <ImageButton
         android:id="@+id/close_button"
-        style="@style/nav_button.start"
+        style="@style/nav_button"
         android:background="@drawable/close"
-        app:layout_constraintBottom_toTopOf="@id/rules_scrollview"/>
-
+        android:layout_weight="0"/>
+<Space
+    style="@style/pusher_padding" />
     <TextView
         android:id="@+id/textView3"
-        style="@style/top_title"
-        android:text="@string/rules_title" />
+        style="@style/nav_title"
+        android:text="@string/rules_title"
+        android:layout_weight="0"/>
+        <Space
+            style="@style/pusher_padding" />
+    <Space
+        style="@style/nav_button_empty"/>
+    </LinearLayout>
 <!--    RULES       -->
     <ScrollView
         android:id="@+id/rules_scrollview"
-        style="@style/centered"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        style="@style/span"
         android:layout_marginBottom="@dimen/rules_bottom_margin"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/close_button">
+        android:scrollbars="vertical">
 
         <TextView
             style="@style/span"
             android:padding="@dimen/rules_text_padding"
             android:text="@string/rules_text" />
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

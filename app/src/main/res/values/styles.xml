@@ -6,74 +6,80 @@
         <item name="android:padding">@dimen/portrait_padding</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="wrapped">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-
     <style name="span">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+    <style name="wrapped.vert">
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="wrapped.vert.1">
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="wrapped.vert.3">
+        <item name="android:layout_weight">3</item>
+    </style>
+    <style name="wrapped.vert.6">
+        <item name="android:layout_weight">6</item>
+    </style>
+    <style name="span.vert">
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="span.vert.1">
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="span.vert.3">
+        <item name="android:layout_weight">3</item>
+    </style>
+    <style name="span.vert.6">
+        <item name="android:layout_weight">6</item>
+    </style>
+    <style name="linear_child">
+
+    </style>
+    <style name="linear_child.1">
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="linear_child.vert">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="linear_child.vert.1">
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="linear_child.vert.3">
+        <item name="android:layout_weight">3</item>
+    </style>
+    <style name="linear_child.vert.6">
+        <item name="android:layout_weight">6</item>
+    </style>
+
 
     <style name="span.adaptive_height">
         <item name="android:layout_height">0dp</item>
     </style>
 
-    <style name="centered">
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-    </style>
-
-    <style name="wrapped.centered">
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-    </style>
-
-    <style name="wrapped.left">
-        <item name="layout_constraintStart_toStartOf">parent</item>
-    </style>
-
-    <style name="wrapped.right">
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-    </style>
-
 
     <!--    TITLE STYLES        -->
-    <style name="title" parent="wrapped.centered">
+    <style name="title" parent="wrapped">
         <item name="android:textSize">@dimen/text_size_1</item>
-    </style>
-
-    <style name="top_title" parent="title">
-        <item name="layout_constraintTop_toTopOf">parent</item>
-    </style>
-
-    <style name="banner_title" parent="top_title">
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="android:layout_marginBottom">@dimen/title_bottom_margin</item>
     </style>
 
     <style name="subheading" parent="wrapped">
         <item name="android:textSize">@dimen/text_size_2</item>
     </style>
 
-    <style name="subheading.centered">
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-    </style>
-
-    <style name="subheading.left">
-        <item name="layout_constraintStart_toStartOf">parent</item>
-    </style>
-
-    <style name="subheading.right">
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-    </style>
 
     <!--    MENU BUTTON STYLES      -->
-    <style name="menu_button" parent="wrapped.centered">
+    <style name="menu_button" parent="wrapped">
         <item name="android:layout_marginBottom">@dimen/menu_button_margin</item>
         <item name="android:layout_marginLeft">@dimen/menu_button_margin</item>
         <item name="android:layout_marginRight">@dimen/menu_button_margin</item>
@@ -95,32 +101,38 @@
         <item name="android:layout_gravity">fill_horizontal</item>
     </style>
 
-    <!--    NAV BUTTON STYLES       -->
+    <!--    NAV STYLES       -->
+    <style name="navbar" parent="span">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/nav_bottom_margin</item>
+    </style>
     <style name="nav_button">
         <item name="android:layout_width">@dimen/nav_button_size</item>
         <item name="android:layout_height">@dimen/nav_button_size</item>
-        <item name="android:layout_marginBottom">@dimen/nav_bottom_margin</item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
         <item name="backgroundTint">@color/darkest_blue</item>
     </style>
-
-    <style name="nav_button.start">
-        <item name="layout_constraintStart_toStartOf">parent</item>
+    <style name="nav_title">
+        <item name="android:textSize">@dimen/text_size_1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
     </style>
-
-    <style name="nav_button.end">
-        <item name="layout_constraintEnd_toEndOf">parent</item>
+    <style name="nav_button_empty">
+        <item name="android:layout_width">@dimen/nav_button_size</item>
+        <item name="android:layout_height">@dimen/nav_button_size</item>
     </style>
 
     <!--    SCORES STYLES   -->
-    <style name="score_label" parent="wrapped.left">
+    <style name="score_label" parent="wrapped">
         <item name="android:textSize">@dimen/text_size_3</item>
         <item name="android:layout_marginTop">@dimen/stat_label_top_margin</item>
     </style>
-
-    <style name="score_name" parent="subheading.left">
+    <style name="score_box" parent="span.vert.1">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="score_name" parent="subheading">
         <item name="android:paddingLeft">@dimen/stat_box_left_padding</item>
-        <item name="android:layout_marginTop">@dimen/stat_row_top_margin</item>
         <item name="android:text">@string/placeholder_name</item>
     </style>
 
@@ -129,24 +141,21 @@
     </style>
 
     <style name="score_time" parent="stat_box_text">
-        <item name="layout_constraintEnd_toEndOf">parent</item>
         <item name="android:text">@string/placeholder_time</item>
+    </style>
+    <style name="pusher_padding" parent="wrapped">
+        <item name="android:layout_weight">1</item>
     </style>
 
 
     <!--    HERO STYLE ACTIVITY STYLES      -->
-    <style name="hero" parent="span.adaptive_height">
-        <item name="android:layout_height">0dp</item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
+    <style name="hero" parent="span.vert.6">
         <item name="android:layout_marginBottom">@dimen/hero_bottom_margin</item>
         <item name="android:scaleType">centerCrop</item>
-        <item name="layout_constraintDimensionRatio">W,1:1</item>
     </style>
 
     <!--    PLAY ACTIVITY STYLES-->
-    <style name="stat_box" parent="wrapped.left">
+    <style name="stat_box" parent="wrapped">
         <item name="android:background">@drawable/score_border</item>
         <item name="android:paddingStart">@dimen/stat_box_left_padding</item>
         <item name="android:gravity">center</item>

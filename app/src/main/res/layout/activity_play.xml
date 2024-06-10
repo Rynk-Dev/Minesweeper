@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,56 +8,64 @@
     tools:ignore="MissingConstraints, ContentDescription"
     >
 <!--        NAVBAR      -->
-    <ImageButton
-        android:id="@+id/close_button"
-        style="@style/nav_button.start"
-        android:background="@drawable/close" />
-    <ImageButton
-        android:id="@+id/rules_button"
-        style="@style/nav_button.end"
-        android:background="@drawable/help" />
+    <LinearLayout
+        style="@style/navbar">
+        <ImageButton
+            android:id="@+id/close_button"
+            style="@style/nav_button"
+            android:background="@drawable/close" />
+        <Space
+            style="@style/pusher_padding"/>
+        <ImageButton
+            android:id="@+id/rules_button"
+            style="@style/nav_button"
+            android:background="@drawable/help" />
+    </LinearLayout>
 <!--        GAME BOARD AREA       -->
     <GridLayout
         android:id="@+id/game_board"
-        style="@style/span"
-        app:layout_constraintBottom_toTopOf="@+id/remaining_mines_box"
-        app:layout_constraintTop_toBottomOf="@+id/close_button">
-
+        style="@style/span.vert.6">
     </GridLayout>
 <!--        SCORES AND CONTROLS         -->
-
+<LinearLayout
+    style="@style/span"
+    android:gravity="center_vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 <!--        MINES REMAINING DISPLAY     -->
-    <LinearLayout
-        android:id="@+id/remaining_mines_box"
-        style="@style/stat_box"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout">
+        <LinearLayout
+            android:id="@+id/remaining_mines_box"
+            style="@style/stat_box">
 
-        <ImageView
-            android:id="@+id/mine_remainder_icon"
-            style="@style/stat_box_icons"
-            android:src="@drawable/mine_icon" />
+            <ImageView
+                android:id="@+id/mine_remainder_icon"
+                style="@style/stat_box_icons"
+                android:src="@drawable/mine_icon" />
 
-        <TextView
-            android:id="@+id/mine_remainder_text"
-            style="@style/stat_box_text"
-            android:text="@string/placeholder_mines_count" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/mine_remainder_text"
+                style="@style/stat_box_text"
+                android:text="@string/placeholder_mines_count" />
+        </LinearLayout>
 <!--        TIME DISPLAY        -->
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        style="@style/stat_box"
-        android:layout_below="@id/remaining_mines_box"
-        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            style="@style/stat_box">
 
-        <ImageView
-            style="@style/stat_box_icons"
-            android:src="@drawable/clock" />
+            <ImageView
+                style="@style/stat_box_icons"
+                android:src="@drawable/clock" />
 
-        <TextView
-            android:id="@+id/elapsed_time"
-            style="@style/stat_box_text"
-            android:text="@string/placeholder_time" />
+            <TextView
+                android:id="@+id/elapsed_time"
+                style="@style/stat_box_text"
+                android:text="@string/placeholder_time" />
+        </LinearLayout>
     </LinearLayout>
+    <Space
+        style="@style/pusher_padding"/>
 <!--        CURSOR MODE CONTROLS        -->
     <RadioGroup
         android:id="@+id/cursor_mode_group"
@@ -66,22 +74,18 @@
         android:background="@drawable/score_border"
         android:backgroundTint="@color/dark_blue"
         android:orientation="horizontal"
-        android:padding="@dimen/border_width"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/remaining_mines_box">
-
+        android:padding="@dimen/border_width">
         <RadioButton
             android:id="@+id/flag_cursor"
             style="@style/cursor_selector"
             android:background="@drawable/flag_mode_selector"
             android:checked="true"
              />
-
         <RadioButton
             android:id="@+id/dig_cursor"
             style="@style/cursor_selector"
             android:background="@drawable/mine_mode_selector"
              />
     </RadioGroup>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+</LinearLayout>
